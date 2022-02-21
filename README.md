@@ -1,0 +1,2 @@
+# dotfiles
+bspwm my beloved

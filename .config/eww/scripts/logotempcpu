@@ -1,0 +1,26 @@
+#!/bin/bash
+TEMPERATURE=($(cat /sys/class/thermal/thermal_zone0/temp) / 1000)
+LOGO=""
+#echo $TEMPERATURE
+if ((TEMPERATURE < 40000))
+then
+LOGO=""
+
+elif ((TEMPERATURE < 60000))
+then
+LOGO=""
+
+elif ((TEMPERATURE < 70000))
+then
+LOGO=""
+
+elif ((TEMPERATURE < 80000))
+then
+LOGO=""
+
+else
+LOGO=""
+
+fi
+
+echo $LOGO

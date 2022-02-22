@@ -1,0 +1,2 @@
+#! /bin/sh
+desktop = $(xprop -root -spy _NET_CURRENT_DESKTOP)

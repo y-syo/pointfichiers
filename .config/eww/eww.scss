@@ -1,0 +1,201 @@
+* {
+    all: unset; //Unsets everything so you can style everything from scratch
+}
+
+.leftbar {
+  background-color: #1a1b26;
+  color: #c0caf5;
+  padding: 5px 15px 5px 15px;
+  //border-radius: 10px;
+}
+
+.rightbar {
+  background-color: #1a1b26;
+  color: #c0caf5;
+  padding: 5px 15px 5px 15px;
+  //border-radius: 10px;
+}
+
+// Styles on classes (see eww.yuck for more information)
+
+.sidestuff slider {
+  all: unset;
+  color: #c0caf5;
+}
+
+.temperatureCPU {
+  font-size: small;
+}
+
+
+.metric scale trough highlight {
+  all: unset;
+  background-color: #7aa2f7;
+  color: #000000;
+  border-radius: 10px;
+}
+.metric scale trough {
+  all: unset;
+  background-color: #414868;
+  border-radius: 50px;
+  min-height: 3px;
+  min-width: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.metric scale trough highlight {
+  all: unset;
+  background-color: #7aa2f7;
+  color: #000000;
+  border-radius: 10px;
+}
+.metric scale trough {
+  all: unset;
+  background-color: #414868;
+  border-radius: 50px;
+  min-height: 3px;
+  min-width: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.label-ram {
+  font-size: large;
+}
+.workspaces button:hover {
+  color: #7aa2f7;
+}
+
+.shortcuts {
+  color: #c0caf5;
+}
+.shortcuts button:hover {
+  color: #7aa2f7;
+}
+
+.separator {
+  color:#555a6e;
+  font-size: small;
+  padding: 0px 20px 0px 15px;
+}
+
+
+
+
+
+
+
+
+
+.menu {
+  background-color: #1a1b26;
+  color: #c0caf5;
+  padding: 10px 20px 10px 20px;
+}
+
+.controlButtonShutdown button {
+  color: #f7768e;
+  font-size: xx-large;
+  font-weight: normal;
+}
+.controlButtonReboot button {
+  color: #9ece6a;
+  font-size: xx-large;
+  font-weight: normal;
+}
+.controlButtonLogout button {
+  color: #e0af68;
+  font-size: xx-large;
+  font-weight: normal;
+}
+
+.controlButtonShutdown button:hover {
+  color: #ffd3db;
+  font-size: xx-large;
+}
+.controlButtonReboot button:hover {
+  color: #e6eedf;
+  font-size: xx-large;
+}
+.controlButtonLogout button:hover {
+  color: #ebddc7;
+  font-size: xx-large;
+}
+
+.controlButtonShutdown {
+  padding: 15px 5px 15px 5px;
+  font-family: cantarell;
+  font-weight: bold;
+}
+.controlButtonReboot {
+  padding: 15px 5px 15px 5px;
+  font-family: cantarell;
+  font-weight: bold;
+}
+.controlButtonLogout {
+  padding: 15px 5px 15px 5px;
+  font-family: cantarell;
+  font-weight: bold;
+}
+
+
+
+/*
+.profile {
+  background-color:#1a1b26;
+  color: #c0caf5;
+  padding: 20px;
+}
+
+.imagepfp{
+  background-image: url("image/ppItte.gif");
+  //background-repeat: no-repeat;
+  background-size: 150px;
+  //background-position: center;
+  min-height: 150px;
+  min-width: 150px;
+  padding: 0px;
+  border-radius: 12px;
+  //box-shadow: ;
+}
+
+.textpfp {
+  color: #c0caf5;
+  //margin: 0px 0px 10px 0px;
+  font-size:x-large;
+  font-family: cantarell;
+  font-weight: bold;
+  text-shadow: 0px 0px 2px #62677e;
+}
+*/
+
+
+
+
+
+
+
+
+
+.shortcutsBottom {
+  background-color: #1a1b26;
+  color: #c0caf5;
+  padding: 10px 10px 10px 10px;
+}
+
+.boxShortcut button {
+  color: #7aa2f7;
+  font-size: xx-large;
+  font-weight: normal;
+}
+
+.boxShortcut button:hover {
+  color: #aec6f8;
+  font-size: xx-large;
+  font-weight: normal;
+}
+
+.boxShortcut {
+  color: #c0caf5;
+  font-weight: bold;
+  padding: 0px 5px 0px 5px;
+}

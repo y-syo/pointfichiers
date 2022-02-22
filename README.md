@@ -1,2 +1,2 @@
-# dotfiles
-bspwm my beloved
+# POINTFICHIERS
+eww supremacy

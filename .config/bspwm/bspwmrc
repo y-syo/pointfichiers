@@ -19,10 +19,7 @@ bspc config gapless_monocle      true
 bspc rule -r "*"
 bspc rule -a eww --layer below
 
-playerctld
-
-setxkbmap -layout fr
 eww daemon
-eww open-many leftbar rightbar folder-revealer profile neofetch musicplayer
-
-setxkbmap -layout fr
+eww open-many leftbar rightbar folder-revealer profile neofetch middlebar
+sleep 2s
+eww open musicplayer

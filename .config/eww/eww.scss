@@ -23,8 +23,6 @@
   //border-radius: 10px;
 }
 
-// Styles on classes (see eww.yuck for more information)
-
 .sidestuff slider {
   all: unset;
   color: #c0caf5;
@@ -34,6 +32,10 @@
   font-size: small;
 }
 
+.discord{
+  color: #c0caf5;
+  //box-reflect: 20px right;
+}
 
 .metric scale trough highlight {
   all: unset;
@@ -294,13 +296,13 @@
   font-size:x-large;
   font-family: cantarell;
   font-weight: normal;
-  margin: 0px 0px 0px 10px;
+  //margin: 0px 0px 0px 10px;
   //text-shadow: 0px 0px 2px #62677e;
 }
 
 .title{
   color: #c0caf5;
-  margin: 0px 0px 0px 10px;
+  //margin: 0px 0px 0px 10px;
   font-size:x-large;
   font-family: cantarell;
   font-weight: bold;
@@ -314,4 +316,8 @@
 
 .musicbuttons button{
   padding: 10px;
+}
+
+.progressbarmusic {
+  padding: 0px 20px 0px 20px;
 }

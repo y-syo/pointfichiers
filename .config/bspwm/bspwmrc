@@ -19,12 +19,10 @@ bspc config gapless_monocle      true
 bspc rule -r "*"
 bspc rule -a eww --layer below
 
-cd /home/yosyo/eww/target/release/
-./eww daemon
-./eww open leftbar
-./eww open rightbar
-./eww open profil
-./eww open menu
-cd
+playerctld
+
+setxkbmap -layout fr
+eww daemon
+eww open-many leftbar rightbar folder-revealer profile neofetch musicplayer
 
 setxkbmap -layout fr

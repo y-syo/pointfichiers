@@ -23,14 +23,14 @@ colors:
 
   # Bright colors
   bright:
-    black:   '0x414868'
-    red:     '0xf7768e'
-    green:   '0x9ece6a'
-    yellow:  '0xe0af68'
-    blue:    '0x7aa2f7'
-    magenta: '0xbb9af7'
-    cyan:    '0x7dcfff'
-    white:   '0xc0caf5'
+    black:   '0x343b58'
+    red:     '0x8c4351'
+    green:   '0x485e30'
+    yellow:  '0x8f5e15'
+    blue:    '0x34548a'
+    magenta: '0x5a4a78'
+    cyan:    '0x166775'
+    white:   '0x9699a3'
 
 font:
   normal:

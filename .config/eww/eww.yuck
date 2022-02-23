@@ -1,11 +1,15 @@
-(defpoll volume :interval "1s" "scripts/getvol")
 (defpoll time :interval "10s" "date '+%H:%M %b %d, %Y'")
 (defpoll cpu :interval "5s" "scripts/cpu")
 (defpoll tempcpu :interval "5s" "scripts/tempcpu")
 (defpoll logotempcpu :interval "5s" "scripts/logotempcpu")
-(deflisten desktopCurrent 'xprop -spy -root _NET_CURRENT_DESKTOP')
+(defpoll logotempgpu :interval "5s" "scripts/logotempgpu")
+(defpoll ramvalue :interval "5s" "scripts/getram")
+(defpoll gpu :interval "5s" "scripts/gpu")
+(defpoll tempgpu :interval "5s" "scripts/tempgpu")
 
+(deflisten desktopCurrent "xprop -spy -root _NET_CURRENT_DESKTOP")
 
+(defvar volume 0)
 
 (defwidget leftbar []
   (centerbox :orientation "h"
@@ -13,92 +17,107 @@
     (separator)
     (shortcuts)))
 
+(defwidget middlebar []
+  (box :orientation "h" :space-evenly false :halign "center"
+    time))
+
 (defwidget rightbar []
   (centerbox :orientation "h"
     (blank)
-    (blank)
-    (sidestuff)))
+    (sidestuff)
+    (menu-revealer)))
 
 (defwidget sidestuff []
   (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
-
-;;  (metric :label ""
-;;            :value volume
-;;            :onchange "pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo {}%")
-
-            (box :label "temperatureCPU" :class "temperatureCPU" {logotempcpu + "  " + tempcpu + "°C      "})
-    (metric :label ""
-            :value {cpu}
-            :onchange "")
-;;    (metric :label ""
-;;            :value {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)}
-;;            :onchange "")
-    time))
     
+    (metric :label ""  :class "metric"
+      :value volume
+    :onchange "pactl set-sink-volume @DEFAULT_SINK@ {}%")
+    
+    ;;(box :label "temperatureCPU" :class "temperatureCPU" {logotempcpu + "  " + tempcpu + "°C      "})
+    ;;(metric :label "" :class "metric"
+      ;;  :value {cpu}
+    ;;:onchange "")
+    ;;    (metric :label "" :class "metric"
+      ;;            :value {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)}
+    ;;            :onchange "")
+  ))
+
 (defwidget blank[]
-    (box :class "blank"
-         :orientation "h"
-         :halign "center"
-         ""))
+  (box :class "blank"
+    :orientation "h"
+    :halign "center"
+  ""))
 
 (defwidget shortcuts []
   (box  :class "shortcuts"
-        :orientation "h"
-        :space-evenly true
-        :halign "start"
-        :spacing 25
-  (button :onclick "alacritty" "")
-  (button :onclick "firefox" "")
-  (button :onclick "nautilus" "")
-  (button :onclick "spotify" "")
-  (button :onclick "discord" "")
-  (button :onclick "steam" "")))
+    :orientation "h"
+    :space-evenly true
+    :halign "start"
+    :spacing 25
+    (button :onclick "alacritty" "")
+    (button :onclick "firefox" "")
+    (button :onclick "nautilus" "")
+    (button :onclick "spotify" "")
+    (button :onclick "discord" "")
+    (button :onclick "steam" "")))
 
 (defwidget separator []
-(box :class "separator" :orientation "h" :halign "center" "|"))
+  (box :class "separator" :orientation "h" :halign "center" "|"))
 
 (defwidget workspaces []
   (box :class "workspaces"
-       :orientation "h"
-       :space-evenly false
-       :halign "start"
-       :spacing 10
-       (button :onclick "bspc desktop -f '^1'" "I")
-       (button :onclick "bspc desktop -f '^2'" "II")
-       (button :onclick "bspc desktop -f '^3'" "III")
-       (button :onclick "bspc desktop -f '^4'" "IV")
-       (button :onclick "bspc desktop -f '^5'" "V")))
+    :orientation "h"
+    :space-evenly false
+    :halign "start"
+    :spacing 10
+    (button :onclick "bspc desktop -f '^1'" "I")
+    (button :onclick "bspc desktop -f '^2'" "II")
+    (button :onclick "bspc desktop -f '^3'" "III")
+    (button :onclick "bspc desktop -f '^4'" "IV")
+    (button :onclick "bspc desktop -f '^5'" "V")))
 
-(defwidget metric [label value onchange]
+(defwidget metric [label value onchange class]
   (box :orientation "h"
-       :class "metric"
-       :space-evenly false
+    :class class
+    :space-evenly false
     (box :class "label" label)
     (scale :min 0
-           :max 101
-           :active {onchange != ""}
-           :value value
-           :onchange onchange)))
+      :max 101
+      :active {onchange != ""}
+      :value value
+    :onchange onchange)))
 
 (defwindow leftbar
   :monitor 0
   :windowtype "dock"
   :geometry (geometry :x "9px"
-                      :y "7px"
-                      :width "1%"
-                      :height "5px"
-                      :anchor "top left")
+    :y "7px"
+    :width "1%"
+    :height "5px"
+  :anchor "top left")
   :reserve (struts :side "top" :distance "40px")
   (leftbar))
+
+(defwindow middlebar
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry :x "-9px"
+    :y "7px"
+    :width "1%"
+    :height "5px"
+  :anchor "top center")
+  :reserve (struts :side "top" :distance "40px")
+  (middlebar))
 
 (defwindow rightbar
   :monitor 0
   :windowtype "dock"
   :geometry (geometry :x "-9px"
-                      :y "7px"
-                      :width "1%"
-                      :height "5px"
-                      :anchor "top right")
+    :y "7px"
+    :width "1%"
+    :height "5px"
+  :anchor "top right")
   :reserve (struts :side "top" :distance "40px")
   (rightbar))
 
@@ -113,99 +132,182 @@
 
 (defwidget shutdown []
   (box :orientation "v" :class "controlButtonShutdown" :halign "center"
-    (button :onclick "shutdown -h now" "")))
+    (button :onclick "shutdown -h now" "  ")))
 
 (defwidget restart []
   (box :orientation "v" :class "controlButtonReboot" :halign "center"
-    (button :onclick "reboot" "")))
+    (button :onclick "reboot" "  ")))
 
 (defwidget logout []
   (box :orientation "v" :class "controlButtonLogout" :halign "center"
-    (button :onclick "scripts/logout" "")))
+    (button :onclick "scripts/logout" "  ")))
 
-(defwindow menu 
-:windowtype "dock"
-:geometry (geometry :x "-9px"
-                    :y "50px"
-                    :width "1px"
-                    :height "1px"
-                    :anchor "top right")
-(menu))
-
-
+(defwindow menu
+  :windowtype "dock"
+  :geometry (geometry :x "-9px"
+    :y "50px"
+    :width "1px"
+    :height "1px"
+  :anchor "top right")
+  (menu))
 
 
-;;(defwidget profile []
-;;  (centerbox :orientation "v"
-;;    (image)
-;;    (blank)
-;;    (subtext)))
-;;
-;;(defwidget image []
-;;  (box :orientation "v" :class "imagepfp" :halign "center"))
-;;
-;;(defwidget subtext []
-;;  (box :orientation "v" :class "textpfp" :halign "center" "hobosyo"))
-;;
-;;(defwindow profile
-;;  :windowtype "dock"
-;;  :geometry (geometry :x "-500px"
-;;                      :y "0px"
-;;                      :width "10px"
-;;                      :height "10px"
-;;                      :anchor "center")
-;;  (profile))
+(defwidget menu-revealer []
+  (box :class "shortcuts" :orientation "h" :space-evenly false
+    (checkbox :onchecked "eww open menu" :onunchecked "eww close menu" "")
+  ))
 
-(defvar reveal false)
-(defvar eww "eww")
-
-(defwidget shortcutsBottom []
+(defwidget shortcutBottom []
   (box  :orientation "h"
-        :class "folders"
-        :halign "center"
-  
-  (shortcutA)
-  (shortcutB)
-  (shortcutC)
-  (shortcutD)
+    :class "folders"
+    :halign "center"
+    
+    (shortcutA)
+    (shortcutB)
+    (shortcutC)
+    (shortcutD)
   ))
 
 (defwidget shortcutA []
   (box :orientation "v" :class "boxShortcut" :halign "center" :space-evenly false
-  (button :onclick "" "")
-  (box :orientation "h" :class "textShortcut" :halign "center" "Documents"))
-  )
+    (button :onclick "" "")
+    (box :orientation "h" :class "textShortcut" :halign "center" "Documents")))
 
 (defwidget shortcutB []
-    (box :orientation "v" :class "boxShortcut" :halign "center" :space-evenly false
+  (box :orientation "v" :class "boxShortcut" :halign "center" :space-evenly false
     (button :onclick "" "")
-    (box :orientation "h" :class "textShortcut" :halign "center" "Downloads"))
-    )
+    (box :orientation "h" :class "textShortcut" :halign "center" "Downloads")))
 
 (defwidget shortcutC []
-    (box :orientation "v" :class "boxShortcut" :halign "center" :space-evenly false
+  (box :orientation "v" :class "boxShortcut" :halign "center" :space-evenly false
     (button :onclick "" "")
-    (box :orientation "h" :class "textShortcut" :halign "center" "Images"))
-    )
+    (box :orientation "h" :class "textShortcut" :halign "center" "Images")))
 
 (defwidget shortcutD []
-    (box :orientation "v" :class "boxShortcut" :halign "center" :space-evenly false
+  (box :orientation "v" :class "boxShortcut" :halign "center" :space-evenly false
     (button :onclick "" "")
-    (box :orientation "h" :class "textShortcut" :halign "center" "GitHub"))
-    )
+    (box :orientation "h" :class "textShortcut" :halign "center" "GitHub")))
 
 (defwindow shortcutsBottom
   :windowtype "dock"
-  :geometry (geometry :x "20px"
-                      :y "-20px"
-                      :width "10px"
-                      :height "10px"
-                      :anchor "bottom left")
-  (shortcutsBottom))
+  :geometry (geometry :x "100px"
+    :y "-20px"
+    :width "10px"
+    :height "10px"
+  :anchor "bottom left")
+  (shortcutBottom))
+
+(defwindow folder-revealer
+  :geometry (geometry
+    :x "20px"
+    :y "-20px"
+    :width "1px"
+    :height "1px"
+  :anchor "bottom left")
+  (folder-revealer))
+
+(defwidget folder-revealer []
+  (box :class "box" :orientation "h"
+    (checkbox :onchecked "eww open shortcutsBottom" :onunchecked "eww close shortcutsBottom" "")
+  ))
 
 
-(defwidget revealFolders []
-    (eventbox :class "eventbox"
-              :onhover "${eww} update ${reveal}=true"
-              :onhoverlost "${eww} update ${reveal}=false"
-)   )
+
+
+
+(defwidget profile []
+  (centerbox :orientation "v"
+    (image)
+    (blank)
+    (subtext)))
+
+(defwidget image []
+  (box :orientation "v"
+    :class "imagepfp"
+    :halign "center"
+    :style "background-image: url('image/pdp.png');"))
+
+(defwidget subtext []
+  (box :orientation "v" :class "textpfp" :halign "center" "hobosyo"))
+
+(defwindow profile
+  :windowtype "dock"
+  :geometry (geometry :x "-500px"
+    :y "0px"
+    :width "10px"
+    :height "10px"
+  :anchor "center")
+  (profile))
+
+
+
+
+
+
+
+
+
+(defwidget neofetch []
+  (box :orientation "h" :halign "center":space-evenly true
+    (box :orientation "v" :halign "center" :space-evenly true
+      (label :class "amogus ":text "cpu")
+      (box :orientation "h" :space-evenly false (metric :class "metric2" :label {cpu + "%"} :value {cpu} :onchange "") {tempcpu + "°C" + "  " + logotempcpu})
+      (label :class "amogus" :text "gpu")
+      (box :orientation "h" :space-evenly false (metric :class "metric3" :label {gpu + "%"} :value {gpu} :onchange "") {tempgpu + "°C" + "  " + logotempgpu})
+      (label :class "amogus" :text "memory")
+      (box :orientation "h" :space-evenly false (metric :class "metric4" :label {ramvalue + "%"} :value {ramvalue} :onchange ""))
+    )
+  ))
+
+(defwindow neofetch
+  :windowtype "dock"
+  :geometry (geometry :x "-275px"
+    :y "0px"
+    :width "235px"
+    :height "10px"
+  :anchor "center")
+  (neofetch))
+
+
+
+
+
+
+(deflisten artist :initial "" "playerctl --player=spotify --follow metadata --format '{{artist}}'")
+(deflisten title :initial "" "playerctl --player=spotify --follow metadata --format '{{title}}'")
+(deflisten artUrl :initial "" "playerctl --player=spotify --follow metadata mpris:artUrl")
+
+
+(defwidget music []
+  (box :class "music"
+    :orientation "h"
+    :space-evenly false
+    :halign "center"
+    (box :class "artMusic"
+      :orientation "h"
+      :space-evenly false
+      :style "background-image: url('${artUrl}');"
+    :halign "center" ) ;;"${artUrl}"
+    (box :class "artist"
+      :orientation "v"
+      :space-evenly false
+      :halign "center"
+      (label :class "title" :limit-width 12 :halign "start" :wrap "false"
+      :text {title != "" ? "${title}" : ""})
+      {artist != "" ? "${artist}" : ""}
+      (box :class "musicbuttons" :orientation "h" :space-evenly true :halign "center"
+        (button :onclick "playerctl --player=spotify previous" "")
+        (button :onclick "playerctl --player=spotify play-pause" "") ;; pause : 
+        (button :onclick "playerctl --player=spotify next" ""))
+      (box :orientation "h" :space-evenly false :halign "center" "barre de progression")
+    )
+  ))
+
+(defwindow musicplayer
+  :windowtype "dock"
+  :geometry (geometry :x "-375px"
+    :y "225px"
+    :width "10px"
+    :height "10px"
+  :anchor "center")
+  (music))

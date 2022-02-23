@@ -9,6 +9,13 @@
   //border-radius: 10px;
 }
 
+.middlebar {
+  background-color: #1a1b26;
+  color: #c0caf5;
+  padding: 5px 15px 5px 15px;
+  //border-radius: 10px;
+}
+
 .rightbar {
   background-color: #1a1b26;
   color: #c0caf5;
@@ -43,26 +50,12 @@
   margin-left: 10px;
   margin-right: 20px;
 }
-.metric scale trough highlight {
-  all: unset;
-  background-color: #7aa2f7;
-  color: #000000;
-  border-radius: 10px;
-}
-.metric scale trough {
-  all: unset;
-  background-color: #414868;
-  border-radius: 50px;
-  min-height: 3px;
-  min-width: 50px;
-  margin-left: 10px;
-  margin-right: 20px;
-}
+
 .label-ram {
   font-size: large;
 }
 .workspaces button:hover {
-  color: #7aa2f7;
+  color: #7aa2f7;;
 }
 
 .shortcuts {
@@ -89,7 +82,7 @@
 .menu {
   background-color: #1a1b26;
   color: #c0caf5;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 10px 10px 25px;
 }
 
 .controlButtonShutdown button {
@@ -139,43 +132,6 @@
 
 
 
-/*
-.profile {
-  background-color:#1a1b26;
-  color: #c0caf5;
-  padding: 20px;
-}
-
-.imagepfp{
-  background-image: url("image/ppItte.gif");
-  //background-repeat: no-repeat;
-  background-size: 150px;
-  //background-position: center;
-  min-height: 150px;
-  min-width: 150px;
-  padding: 0px;
-  border-radius: 12px;
-  //box-shadow: ;
-}
-
-.textpfp {
-  color: #c0caf5;
-  //margin: 0px 0px 10px 0px;
-  font-size:x-large;
-  font-family: cantarell;
-  font-weight: bold;
-  text-shadow: 0px 0px 2px #62677e;
-}
-*/
-
-
-
-
-
-
-
-
-
 .shortcutsBottom {
   background-color: #1a1b26;
   color: #c0caf5;
@@ -198,4 +154,164 @@
   color: #c0caf5;
   font-weight: bold;
   padding: 0px 5px 0px 5px;
+}
+
+.folder-revealer {
+  background-color: #1a1b26;
+  color: #7aa2f7;
+  font-size: xx-large;
+  font-weight: normal;
+  padding: 20px 25px 18px 10px;
+}
+
+
+
+
+
+
+
+
+
+.profile {
+  background-color:#1a1b26;
+  color: #c0caf5;
+  padding: 20px;
+}
+
+.imagepfp{
+  //background-image: url("image/pdp.png");
+  //background-repeat: no-repeat;
+  background-size: 150px;
+  //background-position: center;
+  min-height: 150px;
+  min-width: 150px;
+  padding: 0px;
+  border-radius: 12px;
+  //box-shadow: ;
+}
+
+.textpfp {
+  color: #c0caf5;
+  //margin: 0px 0px 10px 0px;
+  font-size:x-large;
+  font-family: cantarell;
+  font-weight: bold;
+  text-shadow: 0px 0px 2px #62677e;
+}
+
+.neofetch {
+  background-color:#1a1b26;
+  color: #c0caf5;
+  padding: 20px;
+}
+
+.neofetch label {
+  padding: 3px 5px 3px 5px;
+  font-weight: bold;
+  font-family: cantarell;
+}
+
+.amogus {
+  color: #c0caf5;
+  font-size:x-large;
+  font-family: cantarell;
+  font-weight: bold;
+  text-shadow: 0px 0px 2px #62677e;
+  margin: 0px 45px 0px 55px;
+}
+
+.metric2 scale trough highlight {
+  all: unset;
+  background-color: #f77a7a;
+  box-shadow: 0px 0px 2px #f77a7a;
+  color: #000000;
+  border-radius: 10px;
+}
+.metric2 scale trough {
+  all: unset;
+  background-color: #414868;
+  border-radius: 50px;
+  min-height: 3px;
+  min-width: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.metric3 scale trough highlight {
+  all: unset;
+  background-color: #9ece6a;
+  box-shadow: 0px 0px 2px #9ece6a;
+  color: #000000;
+  border-radius: 10px;
+}
+.metric3 scale trough {
+  all: unset;
+  background-color: #414868;
+  border-radius: 50px;
+  min-height: 3px;
+  min-width: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.metric4 scale trough highlight {
+  all: unset;
+  background-color: #bb9af7;
+  box-shadow: 0px 0px 2px #bb9af7;
+  color: #000000;
+  border-radius: 10px;
+}
+.metric4 scale trough {
+  all: unset;
+  background-color: #414868;
+  border-radius: 50px;
+  min-height: 3px;
+  min-width: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+
+
+
+
+
+
+.artMusic{
+//  background-image: url();
+  background-repeat: no-repeat;
+  background-size: 150px;
+  background-position: center;
+  min-height: 150px;
+  min-width: 150px;
+  padding: 0px;
+  border-radius: 12px;
+  //box-shadow: ;
+}
+
+.artist{
+  color: #c0caf5;
+  font-size:x-large;
+  font-family: cantarell;
+  font-weight: normal;
+  margin: 0px 0px 0px 10px;
+  //text-shadow: 0px 0px 2px #62677e;
+}
+
+.title{
+  color: #c0caf5;
+  margin: 0px 0px 0px 10px;
+  font-size:x-large;
+  font-family: cantarell;
+  font-weight: bold;
+  text-shadow: 0px 0px 2px #62677e;
+}
+
+.music{
+  background-color: #1a1b26;
+  padding: 20px 30px 20px 20px;
+}
+
+.musicbuttons button{
+  padding: 10px;
 }

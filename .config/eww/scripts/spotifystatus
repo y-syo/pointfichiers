@@ -1,0 +1,10 @@
+#!/bin/sh
+# shell script to prepend i3status with more stuff
+	cmus_status=$(cmus-remote -Q | head -n 1 | cut -d ' ' -f2-) 
+	if [ "$cmus_status" = "playing" ]; then
+		artist=$(cmus-remote -Q | grep ' artist ' | cut -d ' ' -f3-)
+		song=$(cmus-remote -Q | grep title | cut -d ' ' -f3-)
+		echo "$artist - $song |  $line" || exit 1
+	else
+		echo "$line" || exit 1 
+fi

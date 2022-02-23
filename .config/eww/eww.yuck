@@ -60,7 +60,7 @@
     (button :onclick "scripts/shortcuts/nautilus" "")
     (button :onclick "scripts/shortcuts/spotify" "")
     (button :class "discord" :onclick "scripts/shortcuts/discord" "") ;;
-    (button :onclick "scripts/shortcuts/vscode" "")))
+    (button :onclick "scripts/shortcuts/vscode" "")))
 
 (defwidget separator []
   (box :class "separator" :orientation "h" :halign "center" "|"))
@@ -273,9 +273,10 @@
 
 
 
-(deflisten artist :initial "" "playerctl --follow metadata --format '{{artist}}'")
-(deflisten title :initial "" "playerctl --follow metadata --format '{{title}}'")
+(deflisten artist :initial "" "playerctl --player=spotify --follow metadata --format '{{artist}}'")
+(deflisten title :initial "" "playerctl --player=spotify --follow metadata --format '{{title}}'")
 (deflisten artUrl :initial "" "playerctl --player=spotify --follow metadata mpris:artUrl")
+(deflisten musicprog :initial "" "scripts/musicprog")
 
 
 (defwidget music []
@@ -292,9 +293,10 @@
       :orientation "v"
       :space-evenly false
       :halign "center"
-      (label :class "title" :limit-width 12 :halign "start" :wrap "false" :halign "center"
+      (label :class "title" :limit-width 20 :wrap "true" :halign "center"
       :text {title != "" ? "${title}" : ""})
-      {artist != "" ? "${artist}" : ""}
+      (label :class "artist" :limit-width 20 :wrap "true"
+      :text {artist != "" ? "${artist}" : ""})
       (box :class "musicbuttons" :orientation "h" :space-evenly true :halign "center"
         (button :onclick "playerctl --player=spotify previous" "")
         (button :onclick "playerctl --player=spotify play-pause" "") ;; pause : 

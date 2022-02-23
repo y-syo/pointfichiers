@@ -17,7 +17,7 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 bspc rule -r "*"
-bspc rule -a eww --layer below
+bspc rule -a eww layer=below
 
 eww daemon
 eww open-many leftbar rightbar folder-revealer profile neofetch middlebar

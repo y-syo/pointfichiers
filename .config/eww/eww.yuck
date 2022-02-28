@@ -7,6 +7,7 @@
 (defpoll gpu :interval "5s" "scripts/gpu")
 (defpoll tempgpu :interval "5s" "scripts/tempgpu")
 
+(deflisten workspace "scripts/desktop")
 ;;(deflisten desktopCurrent "xprop -spy -root _NET_CURRENT_DESKTOP")
 
 (defvar volume 0)
@@ -66,16 +67,7 @@
   (box :class "separator" :orientation "h" :halign "center" "|"))
 
 (defwidget workspaces []
-  (box :class "workspaces"
-    :orientation "h"
-    :space-evenly false
-    :halign "start"
-    :spacing 10
-    (button :onclick "bspc desktop -f '^1'" "I")
-    (button :onclick "bspc desktop -f '^2'" "II")
-    (button :onclick "bspc desktop -f '^3'" "III")
-    (button :onclick "bspc desktop -f '^4'" "IV")
-    (button :onclick "bspc desktop -f '^5'" "V")))
+  (literal :class "workspaces" :content workspace))
 
 (defwidget metric [label value onchange class]
   (box :orientation "h"

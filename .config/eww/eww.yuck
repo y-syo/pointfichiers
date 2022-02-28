@@ -7,7 +7,7 @@
 (defpoll gpu :interval "5s" "scripts/gpu")
 (defpoll tempgpu :interval "5s" "scripts/tempgpu")
 
-(deflisten desktopCurrent "xprop -spy -root _NET_CURRENT_DESKTOP")
+;;(deflisten desktopCurrent "xprop -spy -root _NET_CURRENT_DESKTOP")
 
 (defvar volume 0)
 
@@ -59,7 +59,7 @@
     (button :onclick "scripts/shortcuts/firefox" "")
     (button :onclick "scripts/shortcuts/nautilus" "")
     (button :onclick "scripts/shortcuts/spotify" "")
-    (button :class "discord" :onclick "scripts/shortcuts/discord" "") ;;
+    (button :class "discord" :onclick "scripts/shortcuts/discord" "") ;;
     (button :onclick "scripts/shortcuts/vscode" "")))
 
 (defwidget separator []
@@ -208,12 +208,14 @@
 
 (defwidget folder-revealer []
   (box :class "box" :orientation "h"
-    (checkbox :onchecked "eww open shortcutsBottom" :onunchecked "eww close shortcutsBottom" "")
+    (checkbox
+      :onchecked "eww open shortcutsBottom"
+    :onunchecked "eww close shortcutsBottom" "")
   ))
 
 
 
-  (defpoll name :interval "1h" "echo $USER")
+(defpoll name :interval "1h" "echo $USER")
 
 (defwidget profile []
   (centerbox :orientation "v"
@@ -273,43 +275,41 @@
 
 
 
-(deflisten artist :initial "" "playerctl --player=spotify --follow metadata --format '{{artist}}'")
-(deflisten title :initial "" "playerctl --player=spotify --follow metadata --format '{{title}}'")
-(deflisten artUrl :initial "" "playerctl --player=spotify --follow metadata mpris:artUrl")
-(deflisten musicprog :initial "" "scripts/musicprog")
-
+;;(deflisten musicmetadata :initial "" "playerctl --player=spotify --follow metadata --format '{{artist}};{{title}};{{mpris:artUrl}}'")
+;;(deflisten artist :inital "dedge" "echo 'stiti'")
+;;(deflisten title :inital "dedge" "echo 'oui'")
+;;(deflisten artUrl :inital "dedge" "echo 'momog'")
+(defpoll artist :interval "2s" "playerctl --player=spotify metadata artist")
+(defpoll title :interval "2s" "playerctl --player=spotify metadata title")
+(defpoll artUrl :interval "2s" "playerctl --player=spotify metadata mpris:artUrl")
 
 (defwidget music []
   (box :class "music"
     :orientation "h"
-    :space-evenly false
-    :halign "center"
+    :halign "start"
     (box :class "artMusic"
       :orientation "h"
-      :space-evenly false
-      :style "background-image: url('${artUrl}');"
-    :halign "center" ) ;;"${artUrl}"
-    (box :class "artist"
+      :width "150px" :height "150px" :halign "start"
+      :style "background-image: url('${artUrl}');" "") ;;"${artUrl}" ${musicmetadata}
+    (box :class "boxUwU"
       :orientation "v"
-      :space-evenly false
       :halign "center"
-      (label :class "title" :limit-width 20 :wrap "true" :halign "center"
-      :text {title != "" ? "${title}" : ""})
-      (label :class "artist" :limit-width 20 :wrap "true"
-      :text {artist != "" ? "${artist}" : ""})
-      (box :class "musicbuttons" :orientation "h" :space-evenly true :halign "center"
+      (label :class "title" :limit-width 10 :show_truncated "true" :halign "center"
+      :text {title})
+      (label :class "artist" :limit-width 10 :show_truncated "true" :halign "center"
+      :text {artist})
+      (box :class "musicbuttons" :orientation "h" :space-evenly false :halign "start"
         (button :onclick "playerctl --player=spotify previous" "")
-        (button :onclick "playerctl --player=spotify play-pause" "") ;; pause : 
+        (button :onclick "playerctl --player=spotify play-pause" "") ;; play : 
         (button :onclick "playerctl --player=spotify next" ""))
-      (box :class "progressbarmusic" :orientation "h" :space-evenly false :halign "center" "barre de progression")
     )
   ))
 
 (defwindow musicplayer
   :windowtype "dock"
   :geometry (geometry :x "-375px"
-    :y "225px"
-    :width "10px"
+    :y "228px"
+    :width "440px"
     :height "10px"
   :anchor "center")
   (music))

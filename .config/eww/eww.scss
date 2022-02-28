@@ -280,29 +280,25 @@
 
 
 .artMusic{
-//  background-image: url();
-  background-repeat: no-repeat;
+  //background-repeat: no-repeat;
   background-size: 150px;
-  background-position: center;
+  background-position: top;
   min-height: 150px;
   min-width: 150px;
-  padding: 0px;
   border-radius: 12px;
-  //box-shadow: ;
 }
 
 .artist{
   color: #c0caf5;
-  font-size:x-large;
+  font-size:large;
   font-family: cantarell;
   font-weight: normal;
-  //margin: 0px 0px 0px 10px;
-  //text-shadow: 0px 0px 2px #62677e;
+  margin: 0px 0px 25px 0px;
 }
 
 .title{
   color: #c0caf5;
-  //margin: 0px 0px 0px 10px;
+  margin: 10px 0px 0px 0px;
   font-size:x-large;
   font-family: cantarell;
   font-weight: bold;
@@ -311,13 +307,14 @@
 
 .music{
   background-color: #1a1b26;
-  padding: 20px 30px 20px 20px;
+  padding: 20px;
 }
 
 .musicbuttons button{
   padding: 10px;
-}
-
-.progressbarmusic {
-  padding: 0px 20px 0px 30px;
+  color: #c0caf5;
+  font-size:large;
+  font-family: cantarell;
+  font-weight: normal;
+  margin: 0px 0px 0px 29px;
 }

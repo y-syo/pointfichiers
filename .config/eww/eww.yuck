@@ -60,7 +60,7 @@
     (button :onclick "scripts/shortcuts/firefox" "")
     (button :onclick "scripts/shortcuts/nautilus" "")
     (button :onclick "scripts/shortcuts/spotify" "")
-    (button :class "discord" :onclick "scripts/shortcuts/discord" "") ;;
+    (button :onclick "scripts/shortcuts/discord" "")
     (button :onclick "scripts/shortcuts/vscode" "")))
 
 (defwidget separator []
@@ -286,9 +286,9 @@
     (box :class "boxUwU"
       :orientation "v"
       :halign "center"
-      (label :class "title" :limit-width 10 :show_truncated "true" :halign "center"
+      (label :class "title" :limit-width 16 :show_truncated "true" :halign "center"
       :text {title})
-      (label :class "artist" :limit-width 10 :show_truncated "true" :halign "center"
+      (label :class "artist" :limit-width 20 :show_truncated "true" :halign "center"
       :text {artist})
       (box :class "musicbuttons" :orientation "h" :space-evenly false :halign "start"
         (button :onclick "playerctl --player=spotify previous" "")

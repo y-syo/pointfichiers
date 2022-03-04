@@ -22,4 +22,4 @@ bspc rule -a eww layer=below
 
 eww kill
 eww daemon
-eww open-many leftbar rightbar folder-revealer profile neofetch middlebar musicplayer
+eww open-many leftbar rightbar folder-revealer

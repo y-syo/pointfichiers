@@ -1,0 +1,331 @@
+* {
+    all: unset; //Unsets everything so you can style everything from scratch
+}
+
+.leftbar {
+  background-color: #1a1b26;
+  color: #c0caf5;
+  padding: 5px 15px 5px 15px;
+  //border-radius: 10px;
+}
+
+.middlebar {
+  background-color: #1a1b26;
+  color: #c0caf5;
+  padding: 5px 15px 5px 15px;
+  //border-radius: 10px;
+}
+
+.rightbar {
+  background-color: #1a1b26;
+  color: #c0caf5;
+  padding: 5px 15px 5px 15px;
+  //border-radius: 10px;
+}
+
+.sidestuff slider {
+  all: unset;
+  color: #c0caf5;
+}
+
+.temperatureCPU {
+  font-size: small;
+}
+
+.discord{
+  color: #c0caf5;
+  //box-reflect: 20px right;
+}
+
+.metric scale trough highlight {
+  all: unset;
+  background-color: #7aa2f7;
+  color: #000000;
+  border-radius: 10px;
+}
+.metric scale trough {
+  all: unset;
+  background-color: #414868;
+  border-radius: 50px;
+  min-height: 3px;
+  min-width: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.label-ram {
+  font-size: large;
+}
+.workspaces button:hover {
+  color: #7aa2f7;;
+}
+
+.shortcuts {
+  color: #c0caf5;
+}
+.shortcuts button:hover {
+  color: #7aa2f7;
+}
+
+.separator {
+  color:#555a6e;
+  font-size: small;
+  padding: 0px 20px 0px 15px;
+}
+
+
+
+
+
+
+
+
+
+.menu {
+  background-color: #1a1b26;
+  color: #c0caf5;
+  padding: 10px 10px 10px 25px;
+}
+
+.controlButtonShutdown button {
+  color: #f7768e;
+  font-size: xx-large;
+  font-weight: normal;
+}
+.controlButtonReboot button {
+  color: #9ece6a;
+  font-size: xx-large;
+  font-weight: normal;
+}
+.controlButtonLogout button {
+  color: #e0af68;
+  font-size: xx-large;
+  font-weight: normal;
+}
+
+.controlButtonShutdown button:hover {
+  color: #ffd3db;
+  font-size: xx-large;
+}
+.controlButtonReboot button:hover {
+  color: #e6eedf;
+  font-size: xx-large;
+}
+.controlButtonLogout button:hover {
+  color: #ebddc7;
+  font-size: xx-large;
+}
+
+.controlButtonShutdown {
+  padding: 15px 5px 15px 5px;
+  font-family: cantarell;
+  font-weight: bold;
+}
+.controlButtonReboot {
+  padding: 15px 5px 15px 5px;
+  font-family: cantarell;
+  font-weight: bold;
+}
+.controlButtonLogout {
+  padding: 15px 5px 15px 5px;
+  font-family: cantarell;
+  font-weight: bold;
+}
+
+
+
+.shortcutsBottom {
+  background-color: #1a1b26;
+  color: #c0caf5;
+  padding: 10px 10px 10px 10px;
+}
+
+.boxShortcut button {
+  color: #7aa2f7;
+  font-size: xx-large;
+  font-weight: normal;
+}
+
+.boxShortcut button:hover {
+  color: #aec6f8;
+  font-size: xx-large;
+  font-weight: normal;
+}
+
+.boxShortcut {
+  color: #c0caf5;
+  font-weight: bold;
+  padding: 0px 5px 0px 5px;
+}
+
+.folder-revealer {
+  background-color: #1a1b26;
+  color: #7aa2f7;
+  font-size: xx-large;
+  font-weight: normal;
+  padding: 20px 25px 18px 10px;
+}
+
+
+.01, .02, .03, .04, .05, .06 {
+  color: #c0caf5;
+}
+
+.011, .022, .033, .044, .055, .066 {
+  color: #7aa2f7;
+}
+.0 {
+  color: #414868;
+}
+
+
+
+
+
+
+
+
+.profile {
+  background-color:#1a1b26;
+  color: #c0caf5;
+  padding: 20px;
+}
+
+.imagepfp{
+  //background-image: url("image/pdp.png");
+  //background-repeat: no-repeat;
+  background-size: 150px;
+  //background-position: center;
+  min-height: 150px;
+  min-width: 150px;
+  padding: 0px;
+  border-radius: 12px;
+  //box-shadow: ;
+}
+
+.textpfp {
+  color: #c0caf5;
+  //margin: 0px 0px 10px 0px;
+  font-size:x-large;
+  font-family: cantarell;
+  font-weight: bold;
+  text-shadow: 0px 0px 2px #62677e;
+}
+
+.neofetch {
+  background-color:#1a1b26;
+  color: #c0caf5;
+  padding: 20px;
+}
+
+.neofetch label {
+  padding: 3px 5px 3px 5px;
+  font-weight: bold;
+  font-family: cantarell;
+}
+
+.amogus {
+  color: #c0caf5;
+  font-size:x-large;
+  font-family: cantarell;
+  font-weight: bold;
+  text-shadow: 0px 0px 2px #62677e;
+  margin: 0px 45px 0px 55px;
+}
+
+.metric2 scale trough highlight {
+  all: unset;
+  background-color: #f77a7a;
+  box-shadow: 0px 0px 2px #f77a7a;
+  color: #000000;
+  border-radius: 10px;
+}
+.metric2 scale trough {
+  all: unset;
+  background-color: #414868;
+  border-radius: 50px;
+  min-height: 3px;
+  min-width: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.metric3 scale trough highlight {
+  all: unset;
+  background-color: #9ece6a;
+  box-shadow: 0px 0px 2px #9ece6a;
+  color: #000000;
+  border-radius: 10px;
+}
+.metric3 scale trough {
+  all: unset;
+  background-color: #414868;
+  border-radius: 50px;
+  min-height: 3px;
+  min-width: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.metric4 scale trough highlight {
+  all: unset;
+  background-color: #bb9af7;
+  box-shadow: 0px 0px 2px #bb9af7;
+  color: #000000;
+  border-radius: 10px;
+}
+.metric4 scale trough {
+  all: unset;
+  background-color: #414868;
+  border-radius: 50px;
+  min-height: 3px;
+  min-width: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+
+
+
+
+
+
+.artMusic{
+  //background-repeat: no-repeat;
+  background-size: 150px;
+  background-position: top;
+  min-height: 150px;
+  min-width: 150px;
+  border-radius: 12px;
+}
+
+.artist{
+  color: #c0caf5;
+  font-size:large;
+  font-family: cantarell;
+  font-weight: normal;
+  margin: 0px 0px 25px 0px;
+}
+
+.title{
+  color: #c0caf5;
+  margin: 10px 0px 0px 0px;
+  font-size:x-large;
+  font-family: cantarell;
+  font-weight: bold;
+  text-shadow: 0px 0px 2px #62677e;
+}
+
+.music{
+  background-color: #1a1b26;
+  padding: 20px;
+}
+
+.musicbuttons button{
+  padding: 10px;
+  color: #c0caf5;
+  font-size:large;
+  font-family: cantarell;
+  font-weight: normal;
+  margin: 0px 0px 0px 29px;
+}

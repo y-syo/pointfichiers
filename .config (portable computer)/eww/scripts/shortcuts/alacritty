@@ -1,0 +1,2 @@
+#!/bin/bash
+alacritty --working-directory=/home/yosyo

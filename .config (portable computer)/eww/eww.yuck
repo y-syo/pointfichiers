@@ -1,0 +1,296 @@
+(defpoll time :interval "10s" "date '+%H:%M %b %d, %Y'")
+(defpoll cpu :interval "5s" "scripts/cpu")
+(defpoll tempcpu :interval "5s" "scripts/tempcpu")
+(defpoll logotempcpu :interval "5s" "scripts/logotempcpu")
+(defpoll logotempgpu :interval "5s" "scripts/logotempgpu")
+(defpoll ramvalue :interval "5s" "scripts/getram")
+(defpoll gpu :interval "5s" "scripts/gpu")
+(defpoll tempgpu :interval "5s" "scripts/tempgpu")
+(defpoll battery :interval "30s" "cat /sys/class/power_supply/BAT1/capacity")
+
+(deflisten workspace "scripts/desktop")
+
+(defvar volume 0)
+
+(defwidget leftbar []
+  (centerbox :orientation "h"
+    (workspaces)
+    (separator)
+    (shortcuts)))
+
+(defwidget middlebar []
+  (box :orientation "h" :space-evenly false :halign "center"
+  time))
+
+(defwidget rightbar []
+  (centerbox :orientation "h"
+    (blank)
+    (sidestuff)
+    (menu-revealer)))
+
+(defwidget sidestuff []
+  (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
+    
+    (metric :label ""  :class "metric"
+      :value volume
+    :onchange "pactl set-sink-volume @DEFAULT_SINK@ {}%")
+    
+  ))
+
+(defwidget blank[]
+  (box :class "blank"
+    :orientation "h"
+    :halign "center"
+  ""))
+
+(defwidget shortcuts []
+  (box  :class "shortcuts"
+    :orientation "h"
+    :space-evenly true
+    :halign "start"
+    :spacing 25
+    (button :onclick "scripts/shortcuts/alacritty" "")
+    (button :onclick "scripts/shortcuts/firefox" "")
+    (button :onclick "scripts/shortcuts/nautilus" "")
+    (button :onclick "scripts/shortcuts/spotify" "") libreoffice
+    (button :onclick "scripts/shortcuts/vscode" "")))
+
+(defwidget separator []
+  (box :class "separator" :orientation "h" :halign "center" "|"))
+
+(defwidget workspaces []
+  (literal :class "workspaces" :content workspace))
+
+(defwidget metric [label value onchange class]
+  (box :orientation "h"
+    :class class
+    :space-evenly false
+    (box :class "label" label)
+    (scale :min 0
+      :max 101
+      :active {onchange != ""}
+      :value value
+    :onchange onchange)))
+
+(defwindow leftbar
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry :x "9px"
+    :y "7px"
+    :width "1%"
+    :height "5px"
+  :anchor "top left")
+  :reserve (struts :side "top" :distance "40px")
+  (leftbar))
+
+(defwindow middlebar
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry :x "-9px"
+    :y "7px"
+    :width "1%"
+    :height "5px"
+  :anchor "top center")
+  :reserve (struts :side "top" :distance "40px")
+  (middlebar))
+
+(defwindow rightbar
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry :x "-9px"
+    :y "7px"
+    :width "1%"
+    :height "5px"
+  :anchor "top right")
+  :reserve (struts :side "top" :distance "40px")
+  (rightbar))
+
+
+
+
+(defwidget menu []
+  (centerbox :orientation "v"
+    (shutdown)
+    (restart)
+    (logout)))
+
+(defwidget shutdown []
+  (box :orientation "v" :class "controlButtonShutdown" :halign "center"
+    (button :onclick "shutdown -h now" "  ")))
+
+(defwidget restart []
+  (box :orientation "v" :class "controlButtonReboot" :halign "center"
+    (button :onclick "reboot --reboot -p" "  ")))
+
+(defwidget logout []
+  (box :orientation "v" :class "controlButtonLogout" :halign "center"
+    (button :onclick "scripts/logout" "  ")))
+
+(defwindow menu
+  :windowtype "dock"
+  :geometry (geometry :x "-9px"
+    :y "50px"
+    :width "1px"
+    :height "1px"
+  :anchor "top right")
+  (menu))
+
+
+(defwidget menu-revealer []
+  (box :class "shortcuts" :orientation "h" :space-evenly false
+    (checkbox :onchecked "eww open menu" :onunchecked "eww close menu" {battery + "%"})
+  ))
+
+(defwidget shortcutBottom []
+  (box  :orientation "h"
+    :class "folders"
+    :halign "center"
+    
+    (shortcutA)
+    (shortcutB)
+    (shortcutC)
+    (shortcutD)
+  ))
+
+(defwidget shortcutA []
+  (box :orientation "v" :class "boxShortcut" :halign "center" :space-evenly false
+    (button :onclick "" "")
+    (box :orientation "h" :class "textShortcut" :halign "center" "cours")))
+
+(defwidget shortcutB []
+  (box :orientation "v" :class "boxShortcut" :halign "center" :space-evenly false
+    (button :onclick "scripts/shortcuts-files/downloads" "")
+    (box :orientation "h" :class "textShortcut" :halign "center" "Downloads")))
+
+(defwidget shortcutC []
+  (box :orientation "v" :class "boxShortcut" :halign "center" :space-evenly false
+    (button :onclick "scripts/shortcuts-files/config" "")
+    (box :orientation "h" :class "textShortcut" :halign "center" ".config")))
+
+(defwidget shortcutD []
+  (box :orientation "v" :class "boxShortcut" :halign "center" :space-evenly false
+    (button :onclick "scripts/shortcuts-files/github" "")
+    (box :orientation "h" :class "textShortcut" :halign "center" "GitHub")))
+
+(defwindow shortcutsBottom
+  :windowtype "dock"
+  :geometry (geometry :x "100px"
+    :y "-20px"
+    :width "10px"
+    :height "10px"
+  :anchor "bottom left")
+  (shortcutBottom))
+
+(defwindow folder-revealer
+  :geometry (geometry
+    :x "20px"
+    :y "-20px"
+    :width "1px"
+    :height "1px"
+  :anchor "bottom left")
+  (folder-revealer))
+
+(defwidget folder-revealer []
+  (box :class "box" :orientation "h"
+    (checkbox
+      :onchecked "eww open shortcutsBottom"
+    :onunchecked "eww close shortcutsBottom" "")
+  ))
+
+
+
+(defpoll name :interval "1h" "echo $USER")
+
+(defwidget profile []
+  (centerbox :orientation "v"
+    (image)
+    (blank)
+    (subtext)))
+
+(defwidget image []
+  (box :orientation "v"
+    :class "imagepfp"
+    :halign "center"
+    :style "background-image: url('image/pdp.png');"))
+
+(defwidget subtext []
+  (box :orientation "v" :class "textpfp" :halign "center" name))
+
+(defwindow profile
+  :windowtype "dock"
+  :geometry (geometry :x "-500px"
+    :y "0px"
+    :width "10px"
+    :height "10px"
+  :anchor "center")
+  (profile))
+
+
+
+
+
+
+
+
+
+(defwidget neofetch []
+  (box :orientation "h" :halign "center":space-evenly true
+    (box :orientation "v" :halign "center" :space-evenly true
+      (label :class "amogus ":text "cpu")
+      (box :orientation "h" :space-evenly false (metric :class "metric2" :label {cpu + "%"} :value {cpu} :onchange "") {tempcpu + "°C" + "  " + logotempcpu})
+      (label :class "amogus" :text "gpu")
+      (box :orientation "h" :space-evenly false (metric :class "metric3" :label {gpu + "%"} :value {gpu} :onchange "") {tempgpu + "°C" + "  " + logotempgpu})
+      (label :class "amogus" :text "memory")
+      (box :orientation "h" :space-evenly false (metric :class "metric4" :label {ramvalue + "%"} :value {ramvalue} :onchange ""))
+    )
+  ))
+
+(defwindow neofetch
+  :windowtype "dock"
+  :geometry (geometry :x "-275px"
+    :y "0px"
+    :width "235px"
+    :height "10px"
+  :anchor "center")
+  (neofetch))
+
+
+
+
+
+
+
+(defpoll artist :interval "2s" "playerctl --player=spotify metadata artist")
+(defpoll title :interval "2s" "playerctl --player=spotify metadata title")
+(defpoll artUrl :interval "2s" "playerctl --player=spotify metadata mpris:artUrl")
+
+(defwidget music []
+  (box :class "music"
+    :orientation "h"
+    :halign "start"
+    (box :class "artMusic"
+      :orientation "h"
+      :width "150px" :height "150px" :halign "start"
+      :style "background-image: url('${artUrl}');" "") ;;"${artUrl}" ${musicmetadata}
+    (box :class "boxUwU"
+      :orientation "v"
+      :halign "center"
+      (label :class "title" :limit-width 16 :show_truncated "true" :halign "center"
+      :text {title})
+      (label :class "artist" :limit-width 20 :show_truncated "true" :halign "center"
+      :text {artist})
+      (box :class "musicbuttons" :orientation "h" :space-evenly false :halign "start"
+        (button :onclick "playerctl --player=spotify previous" "")
+        (button :onclick "playerctl --player=spotify play-pause" "") ;; play : 
+        (button :onclick "playerctl --player=spotify next" ""))
+    )
+  ))
+
+(defwindow musicplayer
+  :windowtype "dock"
+  :geometry (geometry :x "-375px"
+    :y "228px"
+    :width "440px"
+    :height "10px"
+  :anchor "center")
+  (music))

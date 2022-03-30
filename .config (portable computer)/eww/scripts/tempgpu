@@ -1,2 +1,0 @@
-#! /bin/sh
-echo $(nvidia-smi stats -d temp -c 1 | cut -b 32,33)

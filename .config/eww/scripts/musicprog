@@ -1,6 +1,0 @@
-#!/bin/bash
-duration=$(playerctl --player=spotify metadata mpris:length | cut -b -3)
-status=$(playerctl --player=spotify status)
-if [ "$status" = "Playing" ]; then
-	echo 5
-fi 

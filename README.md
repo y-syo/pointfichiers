@@ -2,7 +2,7 @@
 
 kanagawa x bspwm my beloved
 
-[](/images/full.jpg)
+[image](/images/full.jpg)
 
 # Installation
 

@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/bin/discord --enable-accelerated-mjpeg-decode --enable-accelerated-video --ignore-gpu-blocklist --enable-native-gpu-memory-buffers --enable-gpu-rasterization --canvas-oop-rasterization --enable-features=VaapiVideoDecoder --enable-zero-copy --use-gl=desktop --disable-features=UseOzonePlatform

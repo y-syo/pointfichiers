@@ -1,0 +1,60 @@
+* {
+    all: unset; //Unsets everything so you can style everything from scratch
+}
+
+.bar{
+    background-color: #1F1F28;
+    color: #DCD7BA;
+    padding: 5px 10px 5px 10px;
+}
+
+.shortcutsButton{
+    padding: 0px 10px 0px 10px;
+}
+
+.shortcuts button:hover {
+    color: #C34043;
+    text-shadow: 0px 0px 3px #C34043;
+}
+
+.workspaces button:hover {
+    color: #E46876;
+    text-shadow: 0px 0px 3px #E46876;
+}
+
+.01, .02, .03, .04, .05, .06 {
+    color: #DCD7BA;
+}
+  
+.011, .022, .033, .044, .055, .066 {
+    color: #C34043;
+    text-shadow: 0px 0px 3px #C34043;
+}
+
+.0 {
+    color: #54546D;
+}
+
+.shutdown{
+    color: #C34043;
+    text-shadow: 0px 0px 2px #C34043;
+}
+
+.logout{
+    color: #DCA561;
+    text-shadow: 0px 0px 2px #DCA561;
+}
+
+.reboot{
+    color: #76946A;
+    text-shadow: 0px 0px 2px #76946A;
+}
+
+.powerbuttons button:hover {
+    color: #DCD7BA;
+    text-shadow: 0px 0px 2px #DCD7BA;
+}
+
+.powerbuttons{
+    margin: 0px 10px 0px 10px;
+}

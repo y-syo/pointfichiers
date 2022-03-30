@@ -26,3 +26,5 @@ just execute the install.sh and the dotfiles are now active, ez
 ```
 $ ./install.sh
 ```
+
+[wallpaper](https://keke-i.tumblr.com/post/666805015939301376)

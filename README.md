@@ -6,7 +6,7 @@ kanagawa x bspwm my beloved
 
 # Installation
 
-##### Dependencies :
+### Dependencies :
 
 - [bspwm](https://github.com/baskerville/bspwm)
 
@@ -21,7 +21,7 @@ kanagawa x bspwm my beloved
 - [zsh](https://github.com/zsh-users/zsh)
 
 
-##### actual installation :
+### actual installation :
 
 just execute the install.sh and the dotfiles are now active, ez
 

@@ -1,14 +1,28 @@
-# POINTFICHIERS
-moa c kohkoh
+# Dotfiles
 
-ln -s -d ~/Documents/pointfichiers/.config/alacritty ~/.config/alacritty
+kanagawa x bspwm my beloved
 
-ln -s -d ~/Documents/pointfichiers/.config/bspwm ~/.config/bspwm
+# Installation
 
-ln -s -d ~/Documents/pointfichiers/.config/eww ~/.config/eww
+##### Dependencies :
 
-ln -s -d ~/Documents/pointfichiers/.config/picom ~/.config/picom
+- [bspwm](https://github.com/baskerville/bspwm)
 
-ln -s -d ~/Documents/pointfichiers/.config/sxhkd ~/.config/sxhkd
+- [sxhkd](https://github.com/baskerville/sxhkd)
 
-ln -s -d  ~/Documents/pointfichiers/.config/rofi ~/.config/rofi
+- [picom](https://github.com/yshui/picom)
+
+- [alacritty](https://github.com/alacritty/alacritty)
+
+- [eww](https://github.com/elkowar/eww)
+
+- [zsh](https://github.com/zsh-users/zsh)
+
+
+##### actual installation :
+
+just execute the install.sh and the dotfiles are now active, ez
+
+```
+$ ./install.sh
+```

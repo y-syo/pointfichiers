@@ -18,6 +18,8 @@ kanagawa x bspwm my beloved
 
 - [eww](https://github.com/elkowar/eww)
 
+- [rofi](https://github.com/davatorium/rofi)
+
 - [zsh](https://github.com/zsh-users/zsh)
 
 

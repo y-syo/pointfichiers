@@ -2,6 +2,8 @@
 
 kanagawa x bspwm my beloved
 
+[](/images/full.jpg)
+
 # Installation
 
 ##### Dependencies :

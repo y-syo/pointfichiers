@@ -3,26 +3,33 @@
 <div align="center">
 
 ```
-❤️ hyprland & kanagawa ❤️>
+❤️ hyprland & kanagawa ❤️
 ```
 
 
-# Dotfiles
+
+  # Dotfiles
 
 </div>
 </div>
 
 ## Dependencies
 
-hyprland : https://hyprland.org/
-waybar : https://github.com/Alexays/Waybar
-kitty : https://sw.kovidgoyal.net/kitty
-zsh : https://www.zsh.org/
-Fira Code Nerd Font : https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode
-brightnessctl : https://github.com/Hummer12007/brightnessctl
-eww : https://github.com/elkowar/eww
+- [hyprland](https://hyprland.org/)
 
-gtk theme : https://github.com/Fausto-Korpsvart/Kanagawa-GKT-Theme
+- [waybar](https://github.com/Alexays/Waybar)
+
+- [kitty](https://sw.kovidgoyal.net/kitty)
+
+- [zsh](https://www.zsh.org/)
+
+- [Fira Code Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
+
+- [brightnessctl](https://github.com/Hummer12007/brightnessctl)
+
+- [eww](https://github.com/elkowar/eww)
+
+- [gtk theme](https://github.com/Fausto-Korpsvart/Kanagawa-GKT-Theme)
 
 ## Arch Linux / yosyOS
 
@@ -35,11 +42,16 @@ sudo pacman -Syu kitty zsh ttf-fira-code-nerd grim slurp wl-clipboard brightness
 ame -S waybar-hyprland-git hyprland-nvidia-git
 ```
 
-eww : https://github.com/elkowar/eww
+[eww](https://github.com/elkowar/eww)
 
 ## other distro
 
 keep yourself safe :D
 
-## Installation
+<div align="center">
+
+# Installation
+
+</div>
+
 just run the install script, reboot and it should be fine :clueless:

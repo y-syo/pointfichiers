@@ -1,0 +1,115 @@
+{
+    "layer": "top",
+    "modules-left": ["custom/distro", "wlr/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/prev", "custom/playpause", "custom/next", "mpris#player", "custom/wallpaperChanger1", "custom/wallpaperChanger2", "network", "battery"],
+
+    "custom/distro": {
+	"format": "",
+	"tooltip": false,
+	"on-click": "~/.config/hypr/eww-manager.sh",
+    },
+
+    "wlr/workspaces": {
+	"format": "{icon}",
+	"tooltip": false,
+	"persistent_workspaces" : {
+	    "1": ["eDP-1"],
+	    "2": ["eDP-1"],
+	    "3": ["eDP-1"],
+	    "4": ["eDP-1"],
+	    "5": ["eDP-1"],
+	    "6": ["eDP-1"],
+
+	    "11": ["HDMI-A-1"],
+	    "12": ["HDMI-A-1"],
+	    "13": ["HDMI-A-1"],
+	    "14": ["HDMI-A-1"],
+	    "15": ["HDMI-A-1"],
+	    "16": ["HDMI-A-1"],
+	},
+	"format-icons": {
+	    "11": "1",
+	    "12": "2",
+	    "13": "3",
+	    "14": "4",
+	    "15": "5",
+	    "16": "6",
+	},
+    },
+
+    "clock": {
+	"format": "{:%a %d %b | %H : %M}",
+	"tooltip": false,
+    },
+
+    "mpris#player": {
+	"ignored-players": ["firefox"],
+	"format": "{player_icon} : {title}",
+	"player-icons": {
+	    "spotify": "",
+	    "spotifyd": "",
+	},
+	"tooltip" : false,
+    },
+
+    "custom/prev": {
+	"format": "󰒮",
+	"on-click": "playerctl previous",
+	"tooltip": false,
+    },
+
+    "mpris#playpause": {
+	"name": "playpause",
+	"ignored-players": ["firefox"],
+	"format": "{status_icon}",
+	"status-icons": {
+	    "paused": "󰐊",
+	    "playing": "󰏤",
+	    "disconnected": "󰓛",
+	    "stopped": "X",
+	},
+	"on-click": "playerctl play-pause",
+	"tooltip": false,
+    },
+
+    "custom/playpause": {
+	"on-click": "playerctl play-pause",
+	"format": "󰏤",
+	"tooltip": false,
+    },
+
+    "custom/next": {
+	"format": "󰒭",
+	"on-click": "playerctl next",
+	"tooltip": false,
+    },
+
+    "network": {
+	"interface": "wlo1",
+	"format": "{ifname}",
+	"format-wifi": "{essid}",
+	"format-ethernet": "Ethernet :D",
+	"format-disconnected": "No Network",
+	"tooltip": false,
+    },
+
+    "battery": {
+	"format": "{icon} {capacity} %",
+	"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+	"format-charging": "󰂄 {capacity} %",
+	"tooltip": false,
+    },
+
+    "custom/wallpaperChanger1": {
+	"format": "󰌢",
+	"on-click": "~/.config/waybar/scripts/wallpaper1.sh",
+	"tooltip": false,
+    },
+
+    "custom/wallpaperChanger2": {
+	"format": "",
+	"on-click": "~/.config/waybar/scripts/wallpaper2.sh",
+	"tooltip": false,
+    },
+}

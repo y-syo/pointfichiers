@@ -1,0 +1,10 @@
+(defwindow menu-2
+	:monitor 1
+	:geometry (geometry	:x "0px"
+				:y "0px"
+				:width "1000px"
+				:height "600px"
+				:anchor "center")
+	:stacking "overlay"
+	(menu-container)
+)

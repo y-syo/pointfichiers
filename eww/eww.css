@@ -1,0 +1,145 @@
+* {
+	all: unset;
+}
+
+.menu-1 {
+	background-color: #16161D;
+	color: #DCD7BA;
+	border-radius: 10px;
+}
+
+.menu-2 {
+	background-color: #16161D;
+	color: #DCD7BA;
+	border-radius: 10px;
+}
+
+.time, .hardwareinfo, .user, .powerbuttons, .sliders, .systeminfo, .systeminfo-bar {
+	background-color: #1F1F28;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 10px;
+}
+
+.time {
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.hardwareinfo {
+	margin-bottom: 20px;
+}
+
+.powerbuttons {
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.sliders {
+	margin-right: 20px;
+}
+
+.systeminfo-bar {
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+.systeminfo {
+	margin-top: 20px;
+}
+
+.user {
+	margin-left: 20px;
+	margin-top: 20px;
+
+}
+
+/* ------------------------------------------------------------------------------------- */
+
+.nvidia-gpu {
+	background-color: #2A2A37;
+	color: #98BB6C;
+	margin: 10px;
+}
+
+.amd-gpu {
+	background-color: #2A2A37;
+	color: #C34043;
+	margin: 10px;
+}
+
+.cpu {
+	background-color: #2A2A37;
+	color: #957FB8;
+	margin: 10px;
+}
+
+.ram {
+	background-color: #2A2A37;
+	color: #7E9CD8;
+	margin: 10px;
+}
+
+.nvidia-label, .amd-label, .cpu-label, .ram-label {
+	font-size: 35px;
+	padding-right: 10px;
+}
+
+.powerbuttons button {
+	background-color: transparent;
+	font-size: 30px;
+	padding-right: 7px;
+}
+
+.powerbuttons button:hover {
+	background-color: #2A2A37;
+	border-radius: 10px;
+}
+
+.shutdown {
+	color: #C34043;
+}
+
+.logout {
+	color: #FFA066;
+}
+
+.reboot {
+	color: #98BB6C;
+}
+
+.profile-picture {
+	margin-top: 20px;
+	border-radius: 10px;
+	background-image: url("/home/yosyo/Images/tumblr_287a610c43a033c9b327dd5704c22ed0_ac154559_1280.png");
+	min-width: 150px;
+	min-height: 150px;
+	background-size: 150px;
+}
+
+.user-name {
+	margin-top: 25px;
+	font-size: 25px;
+	font-weight: 700;
+}
+
+.clock-label {
+	margin-top: 60px;
+	font-size: 45px;
+	font-weight: 700;
+}
+
+.date-label {
+	margin-top: 25px;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.systeminfo {
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.volume  {
+	color: #ffffff;
+}

@@ -37,8 +37,10 @@
 sudo pacman -Syu kitty zsh ttf-fira-code-nerd grim slurp wl-clipboard brightnessctl 
 ```
 
+</br>
+
+[``ame``](https://getcryst.al/site/docs/amethyst/getting-started) can be replaced by any AUR helper
 ```
-# ame can be replaced by any AUR helper
 ame -S waybar-hyprland-git hyprland-nvidia-git
 ```
 

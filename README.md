@@ -6,7 +6,7 @@
 ❤️ hyprland & kanagawa ❤️
 ```
 
-
+*Note : this is intended for a dual monitor setup, and for my laptop, you will NEED to change at least the monitor options on the hyprland configuration file*
 
   # Dotfiles
 
@@ -15,7 +15,7 @@
 
 ## Dependencies
 
-- [Compositor : hyprland](https://hyprland.org/)
+- [Compositor : hyprland](https://hyprland.org/) with [hyprsome](https://github.com/sopa0/hyprsome)
 
 - [Bar : waybar](https://github.com/Alexays/Waybar)
 
@@ -47,6 +47,22 @@ ame -S waybar-hyprland-git hyprland-nvidia-git tofi
 ```
 
 [eww](https://github.com/elkowar/eww)
+
+```
+# don't forget to add the eww binary (in target/release after building) to your path
+git clone https://github.com/elkowar/eww
+cd eww
+cargo build --release --no-default-features --features=wayland
+cd target/release
+chmod +x ./eww
+```
+
+[hyprsome](https://github.com/sopa0/hyprsome)
+
+```
+# don't forget to add the cargo binaries to your path
+cargo install hyprsome
+```
 
 ## other distro
 

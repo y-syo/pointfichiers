@@ -15,21 +15,23 @@
 
 ## Dependencies
 
-- [hyprland](https://hyprland.org/)
+- [Compositor : hyprland](https://hyprland.org/)
 
-- [waybar](https://github.com/Alexays/Waybar)
+- [Bar : waybar](https://github.com/Alexays/Waybar)
 
-- [kitty](https://sw.kovidgoyal.net/kitty)
+- [Terminal : kitty](https://sw.kovidgoyal.net/kitty)
 
-- [zsh](https://www.zsh.org/)
+- [Shell : zsh](https://www.zsh.org/)
 
-- [Fira Code Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
+- [Font : Fira Code Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
 
-- [brightnessctl](https://github.com/Hummer12007/brightnessctl)
+- [Menu dependency : brightnessctl](https://github.com/Hummer12007/brightnessctl)
 
-- [eww](https://github.com/elkowar/eww)
+- [Menu : eww](https://github.com/elkowar/eww)
 
-- [gtk theme](https://github.com/Fausto-Korpsvart/Kanagawa-GKT-Theme)
+- [App Launcher : tofi](https://github.com/philj56/tofi)
+
+- [GTK Theme : Kanagawa](https://github.com/Fausto-Korpsvart/Kanagawa-GKT-Theme)
 
 ## Arch Linux / yosyOS
 
@@ -41,7 +43,7 @@ sudo pacman -Syu kitty zsh ttf-fira-code-nerd grim slurp wl-clipboard brightness
 
 [``ame``](https://getcryst.al/site/docs/amethyst/getting-started) can be replaced by any AUR helper
 ```
-ame -S waybar-hyprland-git hyprland-nvidia-git
+ame -S waybar-hyprland-git hyprland-nvidia-git tofi
 ```
 
 [eww](https://github.com/elkowar/eww)
@@ -57,3 +59,5 @@ keep yourself safe :D
 </div>
 
 just run the install script, reboot and it should be fine :clueless:
+
+you could also need [``playerctl``](https://github.com/altdesktop/playerctl) for the bar

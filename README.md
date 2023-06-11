@@ -74,6 +74,6 @@ keep yourself safe :D
 
 </div>
 
-just run the install script, reboot and it should be fine :clueless:
+just run the ``install.sh`` script, reboot and it should be fine :clueless:
 
 you could also need [``playerctl``](https://github.com/altdesktop/playerctl) for the bar

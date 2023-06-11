@@ -5,7 +5,7 @@
     "modules-right": ["custom/prev", "custom/playpause", "custom/next", "mpris#player", "custom/wallpaperChanger1", "custom/wallpaperChanger2", "network", "battery"],
 
     "custom/distro": {
-	"format": "",
+	"format": "🌸",
 	"tooltip": false,
 	"on-click": "~/.config/hypr/eww-manager.sh",
     },
@@ -75,7 +75,7 @@
 
     "custom/playpause": {
 	"on-click": "playerctl play-pause",
-	"format": "󰏤",
+	"format": "󰐊",
 	"tooltip": false,
     },
 

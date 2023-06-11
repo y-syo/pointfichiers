@@ -29,8 +29,8 @@
 (defwidget top-menu-container []
 	(box	:class "top-menu-container"
 		:orientation "h"
+		:space-evenly true
 	(user)
-        (systeminfo)
 	(top-right-menu-container)
 	)
 )
@@ -38,7 +38,16 @@
 (defwidget top-right-menu-container []
 	(box	:class "top-right-menu-container"
 		:orientation "v"
-	(systeminfo-bar)
+	(mid-right-menu-container)
+	(systeminfo-data)
+	)
+)
+
+(defwidget mid-right-menu-container []
+	(box	:class "mid-right-menu-container"
+		:orientation "h"
+	(systeminfo)
+	(pog)
 	)
 )
 
@@ -111,20 +120,35 @@
 
 
 (defwidget user []
-	(box	:class "user"
-		:orientation "v"
+	(box	:class "user-box"
+		:orientation "h"
 		:space-evenly false
 
-	(image	:class "profile-picture"
-		;;:path "/home/yosyo/Images/tumblr_287a610c43a033c9b327dd5704c22ed0_ac154559_1280.png"
-		:image-width "150"
-		:image-height "150"
-		:width "150"
-		:height "150"
-		:halign "center"
-	)
-	(label	:class "user-name"
-		:text {"Hello " + user + " !"})
+		(box	:class "app-launcher"
+			:orientation "v"
+			:space-evenly true
+			:valign "fill"
+
+			(box	:class "spotify-button"	:orientation "h" (button	:onclick "flatpak run com.Spotify.Client"	""))
+			(box    :class "discord-button" :orientation "h" (button    :onclick "discord"       "󰙯"))
+			(box    :class "firefox-button" :orientation "h" (button    :onclick "firefox"       ""))
+			(box    :class "steam-button" :orientation "h" (button    :onclick "flatpak run com.valvesoftware.Steam"       "󰓓")) )
+			
+		(box	:class "user"
+			:orientation "v"
+			:space-evenly false
+
+		(image	:class "profile-picture"
+			;;:path "img/pp.png"
+			:image-width "150"
+			:image-height "150"
+			:width "150"
+			:height "150"
+			:halign "center"
+		)
+		(label	:class "user-name"
+			:text {"Hewwo " + user + " !"})
+		)
 	)
 )
 
@@ -135,21 +159,31 @@
 		:orientation "v"
 		:space-evenly true
 
-	(scale	:class "brightness"
-		:width "150"
-		:height "15"
-		:min "0"
-		:max "255"
-		:onchange "brightnessctl set {}"
-		:orientation "h")
-	(scale	:class "volume"
-		:min "0"
-		:max "100"
-		:value "50"
-		:height "15"
-		:width "150"
-		:onchange "pactl set-sink-volume @DEFAULT_SINK@ {}%"
-		:orientation "h")
+	(box	:class	"brslider"
+		:orientation "h"
+		:space-evenly false
+		(label :class "br-label" :text "󰖨")
+		(scale	:class "brightness"
+			:width "150"
+			:height "15"
+			:value "255"
+			:min "0"
+			:max "255"
+			:onchange "brightnessctl set {}"
+			:orientation "h"))
+
+	(box	:class "vlslider"
+		:orientation "h"
+		:space-evenly false
+		(label :class "vl-label" :text "󰕾")
+		(scale	:class "volume"
+			:min "0"
+			:max "100"
+			:value "50"
+			:height "15"
+			:width "150"
+			:onchange "pactl set-sink-volume @DEFAULT_SINK@ {}%"
+			:orientation "h"))
 	)
 )
 
@@ -184,21 +218,38 @@
 	(label	:class "de"
 		:text {"DE : " + de})
 
-	(label  :class "disk1"
-		:text {"DATA DISK : " + round(EWW_DISK["/media/data"].used / 1000000000, 3) + " / " + round(EWW_DISK["/media/data"].total / 1000000000, 3) })
-	(label  :class "disk2"
-		:text {"ROOT DISK : " + round(EWW_DISK["/"].used / 1000000000, 3) + " / " + round(EWW_DISK["/"].total / 1000000000, 3) })
+	;;(label	:class "system-ram"
+	;;	:text {"RAM : " + round((EWW_RAM.total_mem - 1000000000) / 1000000000, 0) + " Go"})
 	)
 )
 
 
 
-(defwidget systeminfo-bar []
-	(box	:class "systeminfo-bar"
-		:orientation "v"
+(defwidget systeminfo-data []
+	(box	:class "systeminfo-data"
+		:orientation "h"
 		:space-evenly false
 
-	(progress       :value {EWW_DISK["/media/data"].used_perc})
-	(progress       :value {EWW_DISK["/"].used_perc})
+	(box	:class "disk-label"
+		:orientation "v"
+		:space-evenly true
+		(label  :class "disk1"
+			:text {"DATA DISK : " + round(EWW_DISK["/media/data"].used / 1000000000, 3) + " / " + round(EWW_DISK["/media/data"].total / 1000000000, 3) })
+		(label  :class "disk2"
+                        :text {"ROOT DISK : " + round(EWW_DISK["/"].used / 1000000000, 3) + " / " + round(EWW_DISK["/"].total / 1000000000, 3) }))
+
+	(box	:class "disk-progress"
+		:orientation "v"
+		:space-evenly true
+		(progress       :value {EWW_DISK["/media/data"].used_perc})
+		(progress       :value {EWW_DISK["/"].used_perc}))
 	)
+)
+
+(defwidget pog []
+	(box :class "pog" :space-evenly true
+	(box 	:class "pog-bg"
+		:orientation "v"
+		:space-evenly true
+		(label :class "pog-label" :limit-width "20" :text "keep yourself safe ")))
 )

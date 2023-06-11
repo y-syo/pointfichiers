@@ -1,14 +1,15 @@
 width = 100%
 height = 100%
 
-prompt-text = ""
+prompt-text = "> "
 
 text-color = #6e6e8f
 selection-color = #DCD7BA
+input-color = #D27E99
 
 border-width = 0
 outline-width = 0
-padding-left = 45%
+padding-left = 40%
 padding-top = 20%
 
 result-spacing = 15

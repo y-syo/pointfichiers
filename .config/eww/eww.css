@@ -2,23 +2,19 @@
 	all: unset;
 }
 
-.menu-1 {
+.menu-1, .menu-2 {
 	background-color: #16161D;
 	color: #DCD7BA;
 	border-radius: 10px;
+	border: solid 2px #D27E99;
 }
 
-.menu-2 {
-	background-color: #16161D;
-	color: #DCD7BA;
-	border-radius: 10px;
-}
-
-.time, .hardwareinfo, .user, .powerbuttons, .sliders, .systeminfo, .systeminfo-bar {
+.time, .hardwareinfo, .user, .app-launcher, .powerbuttons, .sliders, .systeminfo, .systeminfo-data, .pog {
 	background-color: #1F1F28;
 	border-radius: 10px;
 	margin: 10px;
 	padding: 10px;
+	/*border: solid 2px #D27E99;*/
 }
 
 .time {
@@ -39,7 +35,11 @@
 	margin-right: 20px;
 }
 
-.systeminfo-bar {
+.systeminfo-data {
+	margin-right: 20px;
+}
+
+.pog {
 	margin-right: 20px;
 	margin-top: 20px;
 }
@@ -49,9 +49,13 @@
 }
 
 .user {
-	margin-left: 20px;
 	margin-top: 20px;
 
+}
+
+.app-launcher {
+	margin-left: 20px;
+	margin-top: 20px;
 }
 
 /* ------------------------------------------------------------------------------------- */
@@ -108,10 +112,14 @@
 	color: #98BB6C;
 }
 
+.user {
+	min-width: 400px;
+}
+
 .profile-picture {
 	margin-top: 20px;
 	border-radius: 10px;
-	background-image: url("/home/yosyo/Images/tumblr_287a610c43a033c9b327dd5704c22ed0_ac154559_1280.png");
+	background-image: url("img/pp.png");
 	min-width: 150px;
 	min-height: 150px;
 	background-size: 150px;
@@ -121,6 +129,39 @@
 	margin-top: 25px;
 	font-size: 25px;
 	font-weight: 700;
+}
+
+.app-launcher {
+	min-width: 100px;
+}
+
+.spotify-button {
+	color: #98BB6C;
+}
+
+.discord-button {
+	color: #7E9CD8;
+}
+
+.firefox-button {
+	color: #FFA066;
+	padding-right: 7px;
+}
+
+.steam-button {
+	color: #717C7C;
+}
+
+.app-launcher button {
+	background-size: 40px 40px;
+	font-size: 35px;
+	padding-right: 5px;
+}
+
+.app-launcher button:hover {
+	background-size: 20px 20px;
+	background-color: #2A2A37;
+	border-radius: 10px;
 }
 
 .clock-label {
@@ -140,6 +181,85 @@
 	font-weight: 600;
 }
 
-.volume  {
-	color: #ffffff;
+.vlslider {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.vl-label {
+	margin-right: 15px;
+}
+
+.vlslider scale trough {
+	background-color: #2A2A37;
+	border-radius: 10px;
+	min-height: 10px;
+	min-width: 286px;
+}
+.vlslider scale trough highlight {
+	background-color: #DCD7BA;
+	color: #DCD7BA;
+	border-radius: 10px;
+}
+
+.brslider {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.br-label {
+	margin-right: 15px;
+}
+.brslider scale trough {
+	background-color: #2A2A37;
+	border-radius: 10px;
+	min-height: 10px;
+	min-width: 286px;
+}
+.brslider scale trough highlight {
+	background-color: #DCD7BA;
+	color: #DCD7BA;
+	border-radius: 10px;
+}
+
+.disk-label {
+	margin-left: 15px;
+	margin-right: 15px;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.systeminfo-data progressbar trough {
+	background-color: #2A2A37;
+	border-radius: 10px;
+	min-height: 10px;
+	min-width: 230px;
+	margin-bottom: 20px;
+}
+
+.systeminfo-data progressbar trough progress {
+	min-height: 10px;
+	background-color: #938056;
+	color: #DCD7BA;
+	border-radius: 10px;
+
+}
+
+.pog {
+	font-size: 15px;
+	font-weight: 500;
+	background-image: url("img/bg.jpg");
+	background-size: 270px;
+	background-position: center;
+	padding: 0px;
+}
+
+.pog-bg {
+	border-radius: 10px;
+	background-color: #16161D;
+	opacity: 0.7;
+}
+
+.pog-label {
+	opacity: 1;
 }

@@ -118,11 +118,12 @@
 
 .profile-picture {
 	margin-top: 20px;
-	border-radius: 10px;
+	border-radius: 500px;
 	background-image: url("img/pp.png");
 	min-width: 150px;
 	min-height: 150px;
 	background-size: 150px;
+	border: solid 2px #D27E99;
 }
 
 .user-name {

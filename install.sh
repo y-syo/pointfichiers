@@ -1,8 +1,6 @@
 #!/bin/sh
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 
-echo $DIR
-
 ln -s -d "$DIR/.config/eww" "$XDG_CONFIG_DIR/eww"
 ln -s -d "$DIR/.config/hypr" "$XDG_CONFIG_DIR/hypr"
 ln -s -d "$DIR/.config/kitty" "$XDG_CONFIG_DIR/kitty"

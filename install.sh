@@ -8,6 +8,7 @@ ln -s -d "$DIR/.config/tofi" "$XDG_CONFIG_DIR/tofi"
 ln -s -d "$DIR/.config/waybar" "$XDG_CONFIG_DIR/waybar"
 ln -s -d "$DIR/.config/gtk-3.0" "$XDG_CONFIG_DIR/gtk-3.0"
 ln -s -d "$DIR/.config/gtk-4.0" "$XDG_CONFIG_DIR/gtk-4.0"
+ln -s -d "$DIR/.config/macchina" "$XDG_CONFIG_DIR/macchina"
 
 ln -s "$DIR/.gtkrc-2.0" "$HOME/.gtkrc-2.0"
 ln -s "$DIR/.zshrc" "$HOME/.zshrc"

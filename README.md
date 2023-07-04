@@ -10,6 +10,16 @@
 
   # Dotfiles
 
+![desktop](https://media.discordapp.net/attachments/635625917623828520/1125773964921278517/image.png?width=1129&height=636)
+
+![eww menu](https://media.discordapp.net/attachments/635625917623828520/1125773965340721152/image.png?width=1129&height=636)
+
+![app launcher](https://media.discordapp.net/attachments/635625917623828520/1125773965768532009/image.png?width=1129&height=636)
+
+
+https://github.com/hobosyo/pointfichiers/assets/95646468/6604b5e6-3c62-4cb3-af81-8afd070d6de6
+
+
 </div>
 </div>
 

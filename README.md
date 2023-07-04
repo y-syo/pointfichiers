@@ -10,6 +10,16 @@
 
   # Dotfiles
 
+![desktop](https://media.discordapp.net/attachments/635625917623828520/1125773964921278517/image.png?width=1129&height=636)
+
+![eww menu](https://media.discordapp.net/attachments/635625917623828520/1125773965340721152/image.png?width=1129&height=636)
+
+![app launcher](https://media.discordapp.net/attachments/635625917623828520/1125773965768532009/image.png?width=1129&height=636)
+
+
+https://github.com/hobosyo/pointfichiers/assets/95646468/6604b5e6-3c62-4cb3-af81-8afd070d6de6
+
+
 </div>
 </div>
 
@@ -43,25 +53,7 @@ sudo pacman -Syu kitty zsh ttf-fira-code-nerd grim slurp wl-clipboard brightness
 
 [``ame``](https://getcryst.al/site/docs/amethyst/getting-started) can be replaced by any AUR helper
 ```
-ame -S waybar-hyprland-git hyprland-nvidia-git tofi
-```
-
-[eww](https://github.com/elkowar/eww)
-
-```
-# don't forget to add the eww binary (in target/release after building) to your path
-git clone https://github.com/elkowar/eww
-cd eww
-cargo build --release --no-default-features --features=wayland
-cd target/release
-chmod +x ./eww
-```
-
-[hyprsome](https://github.com/sopa0/hyprsome)
-
-```
-# don't forget to add the cargo binaries to your path
-cargo install hyprsome
+ame -S waybar-hyprland-git hyprland-nvidia-git tofi eww-wayland hyprsome-git
 ```
 
 ## other distro

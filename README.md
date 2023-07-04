@@ -53,25 +53,7 @@ sudo pacman -Syu kitty zsh ttf-fira-code-nerd grim slurp wl-clipboard brightness
 
 [``ame``](https://getcryst.al/site/docs/amethyst/getting-started) can be replaced by any AUR helper
 ```
-ame -S waybar-hyprland-git hyprland-nvidia-git tofi
-```
-
-[eww](https://github.com/elkowar/eww)
-
-```
-# don't forget to add the eww binary (in target/release after building) to your path
-git clone https://github.com/elkowar/eww
-cd eww
-cargo build --release --no-default-features --features=wayland
-cd target/release
-chmod +x ./eww
-```
-
-[hyprsome](https://github.com/sopa0/hyprsome)
-
-```
-# don't forget to add the cargo binaries to your path
-cargo install hyprsome
+ame -S waybar-hyprland-git hyprland-nvidia-git tofi eww-wayland hyprsome-git
 ```
 
 ## other distro

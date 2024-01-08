@@ -1,0 +1,190 @@
+$bg			:#282828;
+$bg1		:#3c3836;
+$bg2		:#504945;
+$red		:#cc241d;
+$lightred	:#fb4934;
+$green		:#98971a;
+$lightgreen	:#b8bb26;
+$yellow		:#d79921;
+$lightyellow:#fabd2f;
+$blue		:#458588;
+$lightblue	:#83a598;
+$purple		:#b16286;
+$lightpurple:#d3869b;
+$gray		:#665c54;
+$white		:#ebdbb2;
+
+* {
+	all: unset;
+}
+
+.menu {
+	font-family: "GohuFont 11 Nerd Font Mono";
+	font-size: 22px;
+	background-color: $bg;
+	color: $white;
+}
+
+.top-content {
+	background-color: $bg;
+	padding: 15px 20px 0px 20px;
+}
+
+.bottom-content {
+	padding: 10px;
+}
+
+.user-picture {
+	background-position: center;
+	background-size: cover;
+	border-radius: 99px;
+	min-height: 35px;
+	min-width: 35px;
+}
+
+.user-separator {
+	margin: 0px 15px;
+	font-size: 28px;
+}
+
+.music-player, .calendar-box, .fetch, .module-buttons, .module-sliders {
+	padding: 10px;
+	background-color: $bg1;
+	margin: 5px;
+}
+
+.music-picture {
+	background-position: center;
+	background-size: cover;
+	border-radius: 5px;
+	min-height: 200px;
+	min-width: 200px;
+}
+
+.music-title {
+	font-weight: 700;
+}
+
+.music-artist {
+	font-size: 20px;
+	padding: 15px 0px;
+}
+
+.music-button {
+	color: $gray;
+}
+
+.music-button:hover {
+	color: $white;
+}
+
+.calendar-box {
+	background-color: $bg1;
+}
+
+.calendar-label {
+	padding-bottom: 10px;
+}
+
+calendar {
+	padding: 3px;
+	background: $bg;
+    &:selected {
+	color: $red;
+	border-radius: 2px;
+	}
+}
+
+.seekrs-picture {
+	background-position: center;
+	background-size: cover;
+	min-height: 35px;
+	min-width: 35px;
+	margin-bottom: 20px;
+}
+
+.seekrs-text {
+	padding-bottom: 10px;
+	padding-left: 15px;
+	font-style: italic;
+}
+
+.stats {
+	min-height: 50px;
+	min-width: 50px;
+	padding: 9px 9px 10px 9px;
+}
+
+.stats-gpu {
+	background-color: $bg2;
+	color: $red;
+	font-size: 25px;
+}
+
+.stats-cpu {
+	background-color: $bg2;
+	color: $blue;
+	font-size: 25px;
+}
+
+.stats-ram {
+	background-color: $bg2;
+	color: $purple;
+}
+
+.stats-disk {
+	background-color: $bg2;
+	color: $yellow;
+}
+
+.module-buttons {
+	padding: 20px 30px;
+}
+
+.shutdown {
+	color: $red;
+}
+.shutdown:hover {
+	color: $lightred;
+}
+
+.sleep {
+	color: $yellow;
+}
+.sleep:hover {
+	color: $lightyellow;
+}
+
+.reboot {
+	color: $blue;
+}
+.reboot:hover {
+	color: $lightblue;
+}
+
+.quit {
+	color: $purple;
+}
+.quit:hover {
+	color: $lightpurple;
+}
+
+.module-sliders scale {
+	padding: 7px 7px 8px 7px;
+	margin: 5px;
+	background-color: $bg1;
+}
+
+.module-sliders scale trough {
+	background-color: $bg2;
+	min-height: 22px;
+	min-width: 250px;
+}
+
+.module-sliders scale trough highlight {
+	background-color: $white;
+	color: $red;
+}
+.module-sliders {
+	color: $blue;
+}

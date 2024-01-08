@@ -1,0 +1,28 @@
+<svg width="256" height="256" style="isolation:isolate" version="1.1" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linearGradient31" x1=".5002" x2=".5002" y2="1" gradientTransform="matrix(244,0,0,228,5.986,12)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ebdbb2" offset="0"/>
+      <stop stop-color="#ebdbb2" stop-opacity=".09804" offset=".1"/>
+      <stop stop-color="#282828" stop-opacity=".1" offset=".9"/>
+      <stop stop-color="#282828" stop-opacity=".4" offset="1"/>
+    </linearGradient>
+    <filter id="a-3" x="-.04224" y="-.0452" width="1.084" height="1.108" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4.294"/>
+      <feOffset dy="4" result="pf_100_offsetBlur"/>
+      <feFlood flood-opacity=".4"/>
+      <feComposite in2="pf_100_offsetBlur" operator="in" result="pf_100_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="pf_100_dropShadow"/>
+    </filter>
+    <linearGradient id="b-5" x1=".5002" x2=".5002" y2="1" gradientTransform="matrix(244,0,0,228,5.981,12.12)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#83a598" offset="0"/>
+      <stop stop-color="#458588" offset="1"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(9.09e-6 -.12)" filter="url(#a-3)">
+    <path d="m165 12.12c72 0 85 15 85 87v56c0 70-13 85-85 85h-74c-72 0-85-15-85-85v-56c0-72 13-87 85-87z" fill="url(#b-5)"/>
+  </g>
+  <g transform="translate(9.09e-6 -.12)" opacity=".5">
+    <path transform="translate(-.004996 .116)" d="m91 12c-72 0-85 15-85 87v56c0 70 13 85 85 85h74c72 0 85-15 85-85v-56c0-72-13-87-85-87zm0 4h74c68 0 80 15 80 83v56c0 66-12 81-80 81h-74c-68 0-80-15-80-81v-56c0-68 12-83 80-83z" fill="url(#linearGradient31)" opacity="1"/>
+  </g>
+  <path d="m182 117.8c0.153-0.53 0.16-1.088 0.16-1.666v-6.196c0-14.66-5.535-28.36-15.73-38.58-10.21-10.23-23.86-15.87-38.51-15.87s-28.25 5.635-38.45 15.87c-10.2 10.22-15.71 23.92-15.71 38.58v6.196c0 0.579 4e-3 1.136 0.159 1.666-9.343 0.74-16.81 10.7-16.81 22.85 0 12.2 7.47 22.2 16.87 22.86 2.514 3.387 6.568 5.445 10.89 5.445 7.506 0 13.6-6.11 13.6-13.62v-29.37c0-7.277-5.579-13.24-12.75-13.6v-2.42c-1e-3 -23.83 18.47-42.5 42.25-42.5s42.25 18.67 42.25 42.5v2.42c-7.174 0.366-12.75 6.328-12.75 13.6v29.37c0 4.912 2.613 9.224 6.521 11.62-4.453 6.55-10.71 11.73-18.12 14.9-2.027-2.258-4.966-3.682-8.233-3.682h-15.34c-6.1 0-11.06 4.963-11.06 11.06v0.193c0 6.1 4.963 11.06 11.06 11.06h15.34c4.488 0 8.358-2.688 10.09-6.537 7.324-2.664 14.02-6.887 19.65-12.51 4.195-4.184 7.616-8.955 10.19-14.14 1.719-0.928 3.234-2.215 4.408-3.797 9.402-0.662 16.85-10.66 16.85-22.86 0-12.14-7.466-22.11-16.81-22.85z" fill="#ebdbb2"/>
+</svg>

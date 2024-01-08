@@ -1,0 +1,27 @@
+<svg width="256" height="256" style="isolation:isolate" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(.007136 -.1198)" filter="url(#a)">
+    <linearGradient id="b" x1=".5002" x2=".5002" y2="1" gradientTransform="matrix(244,0,0,228,5.981,12.12)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ebdbb2" offset="0"/>
+      <stop stop-color="#ebdbb2" offset="1"/>
+    </linearGradient>
+    <path d="m165 12.12c72 0 85 15 85 87v56c0 70-13 85-85 85h-74c-72 0-85-15-85-85v-56c0-72 13-87 85-87z" fill="url(#b)"/>
+  </g>
+  <g stroke-width=".08777">
+    <path d="m128 41.89 23.91 13.96-72.43 42.01-23.91-13.86zm7.66 32.57 24.05-13.96 40.72 23.87-24.24 13.49z" fill="#3b3b3b"/>
+    <path d="m55.57 84v84.35l72.43 42.11v-27.82l-48.38-28.24-0.1393-56.53z" fill="#282828"/>
+    <path d="m200.4 168-72.43 42.48v-27.82l48.29-28.15-0.09288-56.62 24.24-13.49z" fill="#3c3833"/>
+    <path d="m176.2 97.87-48.19 27.22v14.52l18.8-10.79v42.9l12.16-7.119v-42.99l17.23-10.14z" fill="#b8bb26"/>
+    <path d="m79.48 97.87 0.1393 56.53 13.37 7.909v-17.45l20.24 11.63v17.49l14.81 8.654v-57.55zm33.66 46.62-19.96-11.54v-13.17l19.96 11.17z" fill="#98971a"/>
+  </g>
+  <defs>
+    <linearGradient id="linearGradient31" x1=".5002" x2=".5002" y2="1" gradientTransform="matrix(244,0,0,228,5.988,12.12)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d5c4a1" offset="0"/>
+      <stop stop-color="#d5c4a1" stop-opacity=".09804" offset=".1"/>
+      <stop stop-color="#282828" stop-opacity=".1" offset=".9"/>
+      <stop stop-color="#282828" stop-opacity=".4" offset="1"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(.007189 -.1198)" opacity=".5">
+    <path d="m91 12.12c-72 0-85 15-85 87v56c0 70 13 85 85 85h74c72 0 85-15 85-85v-56c0-72-13-87-85-87zm0 4h74c68 0 80 15 80 83v56c0 66-12 81-80 81h-74c-68 0-80-15-80-81v-56c0-68 12-83 80-83z" fill="url(#linearGradient31)" opacity="1"/>
+  </g>
+</svg>

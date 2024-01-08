@@ -1,0 +1,23 @@
+<svg width="256" height="256" style="isolation:isolate" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(.007136 -.1198)" filter="url(#a)">
+    <linearGradient id="b" x1=".5002" x2=".5002" y2="1" gradientTransform="matrix(244,0,0,228,5.981,12.12)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8ec07c" offset="0"/>
+      <stop stop-color="#689d6a" offset="1"/>
+    </linearGradient>
+    <path d="m165 12.12c72 0 85 15 85 87v56c0 70-13 85-85 85h-74c-72 0-85-15-85-85v-56c0-72 13-87 85-87z" fill="url(#b)"/>
+  </g>
+  <path d="m66.11 143.5 61.89 61.89 61.89-61.9-30.95 7e-3v-23.22c0 7.736-10.9 7.743-10.9 7.743s-11.16 0-11.16-7.736-9.104-7.736-9.104-7.736-9.104 0-9.104 7.736-9.104 7.736-9.104 7.736-12.52 0-12.52-7.743v23.22z" fill="#ebdbb2" stroke-width="15.47"/>
+  <path d="m127.8 50.64s-9.104 0-9.104 7.736c0 7.736-9.104 7.736-9.104 7.736s-12.52 0.0065-12.52-7.736v108.3l61.89-7e-3v-108.3c0 7.736-10.9 7.743-10.9 7.743s-11.16 0-11.16-7.736c0-7.736-9.104-7.736-9.104-7.736z" fill="#ebdbb2" opacity=".2" stroke-width="15.47"/>
+  <path d="m109.6 81.58s-12.52-0.0066-12.52 7.736v46.42l61.89-7e-3v-46.42c0-7.736-10.9-7.73-10.9-7.73s-11.16 0-11.16 7.736c0 7.736-9.104 7.736-9.104 7.736s-9.104 0-9.104-7.736c0-7.736-9.104-7.736-9.104-7.736z" fill="#ebdbb2" opacity=".5" stroke-width="15.47"/>
+  <defs>
+    <linearGradient id="linearGradient31" x1=".5002" x2=".5002" y2="1" gradientTransform="matrix(244,0,0,228,5.988,12.12)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d5c4a1" offset="0"/>
+      <stop stop-color="#d5c4a1" stop-opacity=".09804" offset=".1"/>
+      <stop stop-color="#282828" stop-opacity=".1" offset=".9"/>
+      <stop stop-color="#282828" stop-opacity=".4" offset="1"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(.007189 -.1198)" opacity=".5">
+    <path d="m91 12.12c-72 0-85 15-85 87v56c0 70 13 85 85 85h74c72 0 85-15 85-85v-56c0-72-13-87-85-87zm0 4h74c68 0 80 15 80 83v56c0 66-12 81-80 81h-74c-68 0-80-15-80-81v-56c0-68 12-83 80-83z" fill="url(#linearGradient31)" opacity="1"/>
+  </g>
+</svg>

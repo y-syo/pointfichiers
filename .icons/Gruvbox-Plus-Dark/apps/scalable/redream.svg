@@ -1,0 +1,23 @@
+<svg width="256" height="256" style="isolation:isolate" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(.007136 -.1198)" filter="url(#a)">
+    <linearGradient id="b" x1=".5002" x2=".5002" y2="1" gradientTransform="matrix(244,0,0,228,5.981,12.12)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ebdbb2" offset="0"/>
+      <stop stop-color="#ebdbb2" offset="1"/>
+    </linearGradient>
+    <path d="m165 12.12c72 0 85 15 85 87v56c0 70-13 85-85 85h-74c-72 0-85-15-85-85v-56c0-72 13-87 85-87z" fill="url(#b)"/>
+  </g>
+  <defs>
+    <linearGradient id="linearGradient31" x1=".5002" x2=".5002" y2="1" gradientTransform="matrix(244,0,0,228,5.988,12.12)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d5c4a1" offset="0"/>
+      <stop stop-color="#d5c4a1" stop-opacity=".09804" offset=".1"/>
+      <stop stop-color="#282828" stop-opacity=".1" offset=".9"/>
+      <stop stop-color="#282828" stop-opacity=".4" offset="1"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(.007189 -.1198)" opacity=".5">
+    <path d="m91 12.12c-72 0-85 15-85 87v56c0 70 13 85 85 85h74c72 0 85-15 85-85v-56c0-72-13-87-85-87zm0 4h74c68 0 80 15 80 83v56c0 66-12 81-80 81h-74c-68 0-80-15-80-81v-56c0-68 12-83 80-83z" fill="url(#linearGradient31)" opacity="1"/>
+  </g>
+  <path d="m153.6 43c-36.63 7.322-56.47 18.34-72.98 58.03l-0.6873-22.27c-7.504 11.07-20.23 29.47-20.92 50.28-0.4736 14.06 5.273 29.23 19.09 43.99l-22.27 10.84c16.9 3.939 35.71 8.27 60.67 7.803l5.692-43.99 0.0243-0.0231c-3.533-38.12-5.421-75 31.38-104.7z" fill="#076678" stroke-width="12.14" style="isolation:isolate"/>
+  <path d="m142.2 64.25c-7.881 0.04122-16.37 0.5784-25.64 1.755-4.642 20.65-6.08 42.58-1.494 66.88l18.74-24.57c0.6812 7.352 1.319 14.67 1.613 21.89l5.407-7.091c4.586 24.3 3.148 46.23-1.494 66.88-6.194 0.7869-11.91 1.288-17.27 1.542-4.815 7.484-11.2 14.67-19.64 21.46 36.63-7.322 56.47-18.32 72.98-58.01l0.6873 22.25c7.735-11.41 20.89-30.59 20.92-52.18 0.0243-13.53-5.893-27.99-19.09-42.1l22.27-10.84c-16.29-3.798-34.34-7.998-57.99-7.874z" fill="#83a598" stroke-width="12.14" style="isolation:isolate"/>
+  <path d="m140.8 123.1c4.586 24.3 3.166 46.23-1.477 66.88-8.44 1.072-16.03 1.6-22.97 1.717l5.694-44.04z" fill="#076678" stroke-width="10.62" style="isolation:isolate"/>
+</svg>

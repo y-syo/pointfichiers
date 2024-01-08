@@ -1,0 +1,23 @@
+<svg width="256" height="256" style="isolation:isolate" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(.007136 -.1198)" filter="url(#a)">
+    <linearGradient id="b" x1=".5002" x2=".5002" y2="1" gradientTransform="matrix(244,0,0,228,5.981,12.12)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ebdbb2" offset="0"/>
+      <stop stop-color="#ebdbb2" offset="1"/>
+    </linearGradient>
+    <path d="m165 12.12c72 0 85 15 85 87v56c0 70-13 85-85 85h-74c-72 0-85-15-85-85v-56c0-72 13-87 85-87z" fill="url(#b)"/>
+  </g>
+  <path d="m194.9 132.8c0 36.93-34.47 22.83-71.39 22.83-36.93 0-62.33 14.1-62.33-22.83 0-36.93 29.93-66.86 66.86-66.86s66.86 29.93 66.86 66.86z" fill="#83a598" stroke-width="9.551"/>
+  <path d="m172.5 181c-36.54 21.1-80.04 16.02-101.1-20.52-21.1-36.55-8.576-83 27.97-104.1 43.06-0.1987 70.41 78.65 76.41 118.1z" fill="#458588" stroke-width="9.551"/>
+  <path d="m204.4 123.2c0 42.2-34.21 76.41-76.41 76.41-42.2 0-76.41-34.21-76.41-76.41 8.523-14.92 28.65-19.01 52.13-19.1 35.37-0.1404 78.33 10.36 100.7 19.1z" fill="#076678" stroke-width="9.551"/>
+  <defs>
+    <linearGradient id="linearGradient31" x1=".5002" x2=".5002" y2="1" gradientTransform="matrix(244,0,0,228,5.988,12.12)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d5c4a1" offset="0"/>
+      <stop stop-color="#d5c4a1" stop-opacity=".09804" offset=".1"/>
+      <stop stop-color="#282828" stop-opacity=".1" offset=".9"/>
+      <stop stop-color="#282828" stop-opacity=".4" offset="1"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(.007189 -.1198)" opacity=".5">
+    <path d="m91 12.12c-72 0-85 15-85 87v56c0 70 13 85 85 85h74c72 0 85-15 85-85v-56c0-72-13-87-85-87zm0 4h74c68 0 80 15 80 83v56c0 66-12 81-80 81h-74c-68 0-80-15-80-81v-56c0-68 12-83 80-83z" fill="url(#linearGradient31)" opacity="1"/>
+  </g>
+</svg>

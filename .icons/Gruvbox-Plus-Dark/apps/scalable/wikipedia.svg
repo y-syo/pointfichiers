@@ -1,0 +1,21 @@
+<svg width="256" height="256" style="isolation:isolate" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(.007136 -.1198)" filter="url(#a)">
+    <linearGradient id="b" x1=".5002" x2=".5002" y2="1" gradientTransform="matrix(244,0,0,228,5.981,12.12)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ebdbb2" offset="0"/>
+      <stop stop-color="#ebdbb2" offset="1"/>
+    </linearGradient>
+    <path d="m165 12.12c72 0 85 15 85 87v56c0 70-13 85-85 85h-74c-72 0-85-15-85-85v-56c0-72 13-87 85-87z" fill="url(#b)"/>
+  </g>
+  <defs>
+    <linearGradient id="linearGradient31" x1=".5002" x2=".5002" y2="1" gradientTransform="matrix(244,0,0,228,5.988,12.12)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d5c4a1" offset="0"/>
+      <stop stop-color="#d5c4a1" stop-opacity=".09804" offset=".1"/>
+      <stop stop-color="#282828" stop-opacity=".1" offset=".9"/>
+      <stop stop-color="#282828" stop-opacity=".4" offset="1"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(.007189 -.1198)" opacity=".5">
+    <path d="m91 12.12c-72 0-85 15-85 87v56c0 70 13 85 85 85h74c72 0 85-15 85-85v-56c0-72-13-87-85-87zm0 4h74c68 0 80 15 80 83v56c0 66-12 81-80 81h-74c-68 0-80-15-80-81v-56c0-68 12-83 80-83z" fill="url(#linearGradient31)" opacity="1"/>
+  </g>
+  <path d="m100.4 182.9h7.078l23.64-45.84 19.44 45.84h6.818l40.39-92.93c2.262-5.215 6.672-8.344 11.37-9.049v-5.545h-32.66v5.537c4.341 0.9663 8.934 2.592 10.98 7.163l-29.66 68.41c-5.368-11.4-10.86-23.85-16.1-36.29 5.414-11.5 9.831-22.19 16.48-32.69 3.88-6.181 10.18-6.327 13.44-6.634v-5.483h-34.72v5.483c4.325 0 13.34 0.3911 9.325 8.834l-10.07 21.17-10.66-23.54c-1.664-3.673 1.557-6.112 6.825-6.403l-0.0384-5.545h-39.07v5.491c4.655 0.1534 11.22 0.1305 13.64 4.072 7.454 13.7 12.45 27.95 19.25 41.92l-17.6 32.91-29.59-68c-3.328-7.669 4.586-10.13 9.724-10.77l-0.06128-5.614h-41.66v5.491c5.752 1.902 13.18 10.46 15.25 14.79 15.57 32.55 23.39 54.37 38.25 87.25z" fill="#3c3836" stroke="#282828" stroke-width=".09203" style="isolation:isolate"/>
+</svg>

@@ -1,0 +1,35 @@
+<svg width="256" height="256" style="isolation:isolate" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(.007136 -.1198)" filter="url(#a)">
+    <linearGradient id="b" x1=".5002" x2=".5002" y2="1" gradientTransform="matrix(244,0,0,228,5.981,12.12)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#83a598" offset="0"/>
+      <stop stop-color="#458588" offset="1"/>
+    </linearGradient>
+    <path d="m165 12.12c72 0 85 15 85 87v56c0 70-13 85-85 85h-74c-72 0-85-15-85-85v-56c0-72 13-87 85-87z" fill="url(#b)"/>
+  </g>
+  <g transform="translate(-2.88,2.13)" style="isolation:isolate">
+    <path d="m137.5 53.09-39.99 39.99 21.21 21.21 39.99-39.99z" color="#000000" fill="#665c54" stroke-width=".9635" style="-inkscape-stroke:none"/>
+    <path d="m118.1 103.7h-39.99v84.97h39.99z" fill="#665c54" stroke-width="10" style="isolation:isolate"/>
+    <path d="m118.1 173.6h-39.99c-5.538 0-10 4.458-10 10 0 5.538 4.458 10 10 10h39.99c5.538 0 10-4.458 10-10 0-5.538-4.458-10-10-10z" fill="#504945" stroke-width="10" style="isolation:isolate"/>
+    <path d="m128.1 183.6c10 0 10 10 10 10v10h-79.97v-10c0-10 10-10 10-10z" fill="#3c3836" stroke-width="10" style="isolation:isolate"/>
+    <path d="m148.1 49.55-14.13 14.13 34.13 34.13 14.13-14.13-27.07-27.07z" color="#000000" fill="#665c54" stroke-linecap="square" stroke-width=".9635" style="-inkscape-stroke:none;isolation:isolate"/>
+    <path d="m148.1 48.89c-11.08 0-19.99 8.917-19.99 19.99s8.917 19.99 19.99 19.99c11.08 0 19.99-8.917 19.99-19.99s-8.917-19.99-19.99-19.99z" fill="#282828" opacity=".3" stroke-width="10" style="isolation:isolate"/>
+    <path d="m98.1 90.21c-16.61 0-29.99 13.37-29.99 29.99s13.37 29.99 29.99 29.99c16.61 0 29.99-13.37 29.99-29.99s-13.37-29.99-29.99-29.99z" fill="#282828" opacity=".3" stroke-width="10" style="isolation:isolate"/>
+    <path d="m98.1 83.69c-16.61 0-29.99 13.37-29.99 29.99s13.37 29.99 29.99 29.99c16.61 0 29.99-13.37 29.99-29.99s-13.37-29.99-29.99-29.99z" fill="#504945" stroke-width="10" style="isolation:isolate"/>
+    <path d="m98.1 93.68c-11.08 0-19.99 8.917-19.99 19.99 0 11.08 8.917 19.99 19.99 19.99 11.08 0 19.99-8.917 19.99-19.99 0-11.08-8.917-19.99-19.99-19.99z" fill="#928374" stroke-width="10" style="isolation:isolate"/>
+    <path d="m98.1 103.7c-5.538 0-10 4.458-10 10 0 5.538 4.458 10 10 10 5.538 0 10-4.458 10-10 0-5.538-4.458-10-10-10z" fill="#3c3836" stroke-width="10" style="isolation:isolate"/>
+    <path d="m148.1 43.7c-11.08 0-19.99 8.917-19.99 19.99 0 11.08 8.917 19.99 19.99 19.99 11.08 0 19.99-8.917 19.99-19.99 0-11.08-8.917-19.99-19.99-19.99z" fill="#504945" stroke-width="10" style="isolation:isolate"/>
+    <path d="m183 73.66a4.999 4.999 0 0 0-3.534 1.465l-19.99 19.99a4.999 4.999 0 0 0-1.465 3.534v19.99a4.999 4.999 0 0 0 4.991 4.999l19.99 0.0301a4.999 4.999 0 0 0 5.005-4.991 4.999 4.999 0 0 0-4.991-5.005l-15-0.0225v-12.93l17.06-17.06h12.92v14.99a4.999 4.999 0 0 0 4.999 4.998 4.999 4.999 0 0 0 4.999-4.998v-19.99a4.999 4.999 0 0 0-4.999-4.999z" color="#000000" fill="#3c3836" stroke-linecap="round" stroke-linejoin="round" stroke-width=".9635" style="-inkscape-stroke:none;isolation:isolate"/>
+    <path d="m148.1 53.69c-5.538 0-10 4.458-10 10 0 5.538 4.458 10 10 10s10-4.458 10-10c0-5.538-4.458-10-10-10z" fill="#928374" stroke-width="10" style="isolation:isolate"/>
+  </g>
+  <defs>
+    <linearGradient id="linearGradient31" x1=".5002" x2=".5002" y2="1" gradientTransform="matrix(244,0,0,228,5.988,12.12)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d5c4a1" offset="0"/>
+      <stop stop-color="#d5c4a1" stop-opacity=".09804" offset=".1"/>
+      <stop stop-color="#282828" stop-opacity=".1" offset=".9"/>
+      <stop stop-color="#282828" stop-opacity=".4" offset="1"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(.007189 -.1198)" opacity=".5">
+    <path d="m91 12.12c-72 0-85 15-85 87v56c0 70 13 85 85 85h74c72 0 85-15 85-85v-56c0-72-13-87-85-87zm0 4h74c68 0 80 15 80 83v56c0 66-12 81-80 81h-74c-68 0-80-15-80-81v-56c0-68 12-83 80-83z" fill="url(#linearGradient31)" opacity="1"/>
+  </g>
+</svg>
